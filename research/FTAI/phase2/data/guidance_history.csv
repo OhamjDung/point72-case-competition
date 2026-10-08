@@ -1,0 +1,20 @@
+date_given,metric,value,unit,revision_vs_prior,source,note
+2025-02-26,2025 Adj FCF target,650,USD M,initial,8-K Ex99.1 2025-02-26 acc 0001140361-25-006099,"approximately 650; includes SCI sale proceeds, excludes gains on sales; definition in footnote 2"
+2025-02-26,2025 module production assumption,100 per quarter (Montreal),modules,initial,same,also 25-35 V2500 MRE transactions in 2025; net Aerospace margin at least FY24
+2025-02-26,2025 total Adj EBITDA guidance,"1,100-1,150",USD M,initial,secondary: web-search summary of guidance history; UNVERIFIED,not in the release text extracted
+2025-04-30 (per secondary; labelled Q2/May 2025),2025 total Adj EBITDA guidance,"1,250-1,300",USD M,"raised from 1,100-1,150",secondary: search summary of investing.com; date ambiguous; UNVERIFIED,
+2025-04-30 (per secondary),2025 Adj FCF target,750,USD M,raised from 650,"secondary, same; UNVERIFIED",
+2026-02-25,FY2025 Adj FCF actual (company-defined),724,USD M,n/a (actual),Q4-25 call (secondary summaries),"further adjusted for 3 key investments: 52 SCI, 150 Power turbines, 50 hot-section parts"
+2025-10-29,2026 segment Adj EBITDA,1525,USD M,"raised from 1,400",8-K Ex99.1 2025-10-29 acc 0001590364-25-000038,"Aerospace Products about 1,000; Aviation Leasing 525"
+2026-02-25,2026 segment Adj EBITDA,1625,USD M,"raised from 1,525",8-K Ex99.1 2026-02-25 acc 0001628280-26-011685,"Aerospace Products 1,050; Aviation Leasing 575"
+2026-02-25,FTAI Power Mod-1,first delivery by Q4 2026; 100 units planned 2027,units,initial,same,8-K bullet
+2026-04-29 or earlier (date not confirmed),2026 Adj FCF guide,915,USD M,prior value per Q2-26 transcript summary,Q2-26 transcript summary via investing.com,UNVERIFIED date first given
+2026-04-29,2027 Mod-1 production target,100 units,units,reiterated,8-K Ex99.1 2026-04-29 acc 0001628280-26-028390 (Jereh JV bullet),
+2026-07-29,2026 Aerospace Products Adj EBITDA,1050,USD M,reaffirmed,8-K Ex99.1 2026-07-29 acc 0001628280-26-050622,
+2026-07-29,2026 Aviation Leasing Adj EBITDA,475,USD M,CUT from 575,same,"continued shift to asset-light; implies 2026 segment total 1,525 (back to Oct-25 level)"
+2026-07-29,2027 segment Adj EBITDA,2300,USD M,initial,same,"Aerospace Products 1,400; FTAI Power 450; Aviation Leasing 450"
+2026-07-30,FTAI Power 2027 EBITDA range,450-750,USD M,initial (450 is the base in the 2.3B guide),"Q2-26 call, J. Adams (investing.com transcript)",
+2026-07-30,2026 Adj FCF guide,878,USD M,revised down from 915,"Q2-26 call, McAleese (investing.com transcript)",H1-26 actual 255
+2026-07-30,2026 module production,1200,modules,"raised from 1,050",Q2-26 call (investing.com transcript),
+2026-07-30,2027 module production,"1,700",modules,initial,Q2-26 call Q&A (investing.com summary; first 100k chars read only),UNVERIFIED
+2026-07-29,FTAI Power customer contract,"1,465",USD M,new,8-K Ex99.1 2026-07-29,hyperscaler Mod-1 contract; substantial portion of the 100-unit 2027 target

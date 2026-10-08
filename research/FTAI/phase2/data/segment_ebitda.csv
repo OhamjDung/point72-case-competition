@@ -1,0 +1,98 @@
+period,basis,segment,metric,value_usd_m,source
+Q1-2023,reported,Aerospace Products,Adjusted EBITDA,27.377,2024-04-26 10-Q acc 0001590364-24-000011 (Q1-23 comparative; equals orig. 2023-04-27 10-Q acc 0001590364-23-000013)
+Q1-2023,reported,Aviation Leasing,Adjusted EBITDA,107.556,2024-04-26 10-Q acc 0001590364-24-000011 (Q1-23 comparative; equals orig. 2023-04-27 10-Q acc 0001590364-23-000013)
+Q1-2023,reported,Corporate and Other,Adjusted EBITDA,-7.277,2024-04-26 10-Q acc 0001590364-24-000011 (Q1-23 comparative; equals orig. 2023-04-27 10-Q acc 0001590364-23-000013)
+Q1-2023,reported,Eliminations (profit elimination on sales to 2025 Partnership; = Total less segments),Adjusted EBITDA,0.0,2024-04-26 10-Q acc 0001590364-24-000011 (Q1-23 comparative; equals orig. 2023-04-27 10-Q acc 0001590364-23-000013)
+Q1-2023,reported,Total Adjusted EBITDA,Adjusted EBITDA,127.656,2024-04-26 10-Q acc 0001590364-24-000011 (Q1-23 comparative; equals orig. 2023-04-27 10-Q acc 0001590364-23-000013)
+Q2-2023,reported,Aerospace Products,Adjusted EBITDA,34.747,"2024-08-09 10-Q acc 0001590364-24-000016 (recast comparative, V2500 moved to Aerospace)"
+Q2-2023,reported,Aviation Leasing,Adjusted EBITDA,121.166,"2024-08-09 10-Q acc 0001590364-24-000016 (recast comparative, V2500 moved to Aerospace)"
+Q2-2023,reported,Corporate and Other,Adjusted EBITDA,-2.836,"2024-08-09 10-Q acc 0001590364-24-000016 (recast comparative, V2500 moved to Aerospace)"
+Q2-2023,reported,Eliminations (profit elimination on sales to 2025 Partnership; = Total less segments),Adjusted EBITDA,0.0,"2024-08-09 10-Q acc 0001590364-24-000016 (recast comparative, V2500 moved to Aerospace)"
+Q2-2023,reported,Total Adjusted EBITDA,Adjusted EBITDA,153.077,"2024-08-09 10-Q acc 0001590364-24-000016 (recast comparative, V2500 moved to Aerospace)"
+Q3-2023,reported,Aerospace Products,Adjusted EBITDA,43.289,2024-11-12 10-Q acc 0001590364-24-000021 (recast comparative)
+Q3-2023,reported,Aviation Leasing,Adjusted EBITDA,116.858,2024-11-12 10-Q acc 0001590364-24-000021 (recast comparative)
+Q3-2023,reported,Corporate and Other,Adjusted EBITDA,-5.929,2024-11-12 10-Q acc 0001590364-24-000021 (recast comparative)
+Q3-2023,reported,Eliminations (profit elimination on sales to 2025 Partnership; = Total less segments),Adjusted EBITDA,0.0,2024-11-12 10-Q acc 0001590364-24-000021 (recast comparative)
+Q3-2023,reported,Total Adjusted EBITDA,Adjusted EBITDA,154.218,2024-11-12 10-Q acc 0001590364-24-000021 (recast comparative)
+Q4-2023,derived,Aerospace Products,Adjusted EBITDA,54.596,DERIVED: FY (2024-02-26 10-K acc 0001590364-24-000003 (FY23)) less 9M (Q3 10-Q YTD)
+Q4-2023,derived,Aviation Leasing,Adjusted EBITDA,121.808,DERIVED: FY (2024-02-26 10-K acc 0001590364-24-000003 (FY23)) less 9M (Q3 10-Q YTD)
+Q4-2023,derived,Corporate and Other,Adjusted EBITDA,-14.073,DERIVED: FY (2024-02-26 10-K acc 0001590364-24-000003 (FY23)) less 9M (Q3 10-Q YTD)
+Q4-2023,derived,Eliminations (profit elimination on sales to 2025 Partnership; = Total less segments),Adjusted EBITDA,0.0,DERIVED: FY (2024-02-26 10-K acc 0001590364-24-000003 (FY23)) less 9M (Q3 10-Q YTD)
+Q4-2023,derived,Total Adjusted EBITDA,Adjusted EBITDA,162.331,DERIVED: FY (2024-02-26 10-K acc 0001590364-24-000003 (FY23)) less 9M (Q3 10-Q YTD)
+FY2023,reported,Aerospace Products,Adjusted EBITDA,160.009,2024-02-26 10-K acc 0001590364-24-000003 (FY23)
+FY2023,reported,Aviation Leasing,Adjusted EBITDA,467.388,2024-02-26 10-K acc 0001590364-24-000003 (FY23)
+FY2023,reported,Corporate and Other,Adjusted EBITDA,-30.115,2024-02-26 10-K acc 0001590364-24-000003 (FY23)
+FY2023,reported,Eliminations (profit elimination on sales to 2025 Partnership; = Total less segments),Adjusted EBITDA,0.0,2024-02-26 10-K acc 0001590364-24-000003 (FY23)
+FY2023,reported,Total Adjusted EBITDA,Adjusted EBITDA,597.282,2024-02-26 10-K acc 0001590364-24-000003 (FY23)
+Q1-2024,reported,Aerospace Products,Adjusted EBITDA,70.277,2025-05-05 10-Q acc 0001590364-25-000011 (Q1-24 comparative)
+Q1-2024,reported,Aviation Leasing,Adjusted EBITDA,104.807,2025-05-05 10-Q acc 0001590364-25-000011 (Q1-24 comparative)
+Q1-2024,reported,Corporate and Other,Adjusted EBITDA,-10.983,2025-05-05 10-Q acc 0001590364-25-000011 (Q1-24 comparative)
+Q1-2024,reported,Eliminations (profit elimination on sales to 2025 Partnership; = Total less segments),Adjusted EBITDA,0.0,2025-05-05 10-Q acc 0001590364-25-000011 (Q1-24 comparative)
+Q1-2024,reported,Total Adjusted EBITDA,Adjusted EBITDA,164.101,2025-05-05 10-Q acc 0001590364-25-000011 (Q1-24 comparative)
+Q2-2024,reported,Aerospace Products,Adjusted EBITDA,91.24,2025-07-31 10-Q acc 0001590364-25-000023 (comparative)
+Q2-2024,reported,Aviation Leasing,Adjusted EBITDA,124.981,2025-07-31 10-Q acc 0001590364-25-000023 (comparative)
+Q2-2024,reported,Corporate and Other,Adjusted EBITDA,-2.317,2025-07-31 10-Q acc 0001590364-25-000023 (comparative)
+Q2-2024,reported,Eliminations (profit elimination on sales to 2025 Partnership; = Total less segments),Adjusted EBITDA,0.0,2025-07-31 10-Q acc 0001590364-25-000023 (comparative)
+Q2-2024,reported,Total Adjusted EBITDA,Adjusted EBITDA,213.904,2025-07-31 10-Q acc 0001590364-25-000023 (comparative)
+Q3-2024,reported,Aerospace Products,Adjusted EBITDA,101.814,2025-10-29 10-Q acc 0001590364-25-000041 (comparative)
+Q3-2024,reported,Aviation Leasing,Adjusted EBITDA,136.423,2025-10-29 10-Q acc 0001590364-25-000041 (comparative)
+Q3-2024,reported,Corporate and Other,Adjusted EBITDA,-6.207,2025-10-29 10-Q acc 0001590364-25-000041 (comparative)
+Q3-2024,reported,Eliminations (profit elimination on sales to 2025 Partnership; = Total less segments),Adjusted EBITDA,0.0,2025-10-29 10-Q acc 0001590364-25-000041 (comparative)
+Q3-2024,reported,Total Adjusted EBITDA,Adjusted EBITDA,232.03,2025-10-29 10-Q acc 0001590364-25-000041 (comparative)
+Q4-2024,derived,Aerospace Products,Adjusted EBITDA,117.305,DERIVED: FY (2026-02-27 10-K acc 0001628280-26-012940 (FY24 comparative)) less 9M (Q3 10-Q YTD)
+Q4-2024,derived,Aviation Leasing,Adjusted EBITDA,133.851,DERIVED: FY (2026-02-27 10-K acc 0001628280-26-012940 (FY24 comparative)) less 9M (Q3 10-Q YTD)
+Q4-2024,derived,Corporate and Other,Adjusted EBITDA,0.859,DERIVED: FY (2026-02-27 10-K acc 0001628280-26-012940 (FY24 comparative)) less 9M (Q3 10-Q YTD)
+Q4-2024,derived,Eliminations (profit elimination on sales to 2025 Partnership; = Total less segments),Adjusted EBITDA,0.0,DERIVED: FY (2026-02-27 10-K acc 0001628280-26-012940 (FY24 comparative)) less 9M (Q3 10-Q YTD)
+Q4-2024,derived,Total Adjusted EBITDA,Adjusted EBITDA,252.015,DERIVED: FY (2026-02-27 10-K acc 0001628280-26-012940 (FY24 comparative)) less 9M (Q3 10-Q YTD)
+FY2024,reported,Aerospace Products,Adjusted EBITDA,380.636,2026-02-27 10-K acc 0001628280-26-012940 (FY24 comparative)
+FY2024,reported,Aviation Leasing,Adjusted EBITDA,500.062,2026-02-27 10-K acc 0001628280-26-012940 (FY24 comparative)
+FY2024,reported,Corporate and Other,Adjusted EBITDA,-18.648,2026-02-27 10-K acc 0001628280-26-012940 (FY24 comparative)
+FY2024,reported,Eliminations (profit elimination on sales to 2025 Partnership; = Total less segments),Adjusted EBITDA,0.0,2026-02-27 10-K acc 0001628280-26-012940 (FY24 comparative)
+FY2024,reported,Total Adjusted EBITDA,Adjusted EBITDA,862.05,2026-02-27 10-K acc 0001628280-26-012940 (FY24 comparative)
+Q1-2025,reported,Aerospace Products,Adjusted EBITDA,130.945,2026-05-01 10-Q acc 0001628280-26-029335 (comparative)
+Q1-2025,reported,Aviation Leasing,Adjusted EBITDA,161.989,2026-05-01 10-Q acc 0001628280-26-029335 (comparative)
+Q1-2025,reported,Corporate and Other,Adjusted EBITDA,-17.426,2026-05-01 10-Q acc 0001628280-26-029335 (comparative)
+Q1-2025,reported,Eliminations (profit elimination on sales to 2025 Partnership; = Total less segments),Adjusted EBITDA,-6.95,2026-05-01 10-Q acc 0001628280-26-029335 (comparative)
+Q1-2025,reported,Total Adjusted EBITDA,Adjusted EBITDA,268.558,2026-05-01 10-Q acc 0001628280-26-029335 (comparative)
+Q2-2025,reported,Aerospace Products,Adjusted EBITDA,164.864,2026-07-31 10-Q acc 0001628280-26-051412 (comparative)
+Q2-2025,reported,Aviation Leasing,Adjusted EBITDA,199.303,2026-07-31 10-Q acc 0001628280-26-051412 (comparative)
+Q2-2025,reported,Corporate and Other,Adjusted EBITDA,-11.427,2026-07-31 10-Q acc 0001628280-26-051412 (comparative)
+Q2-2025,reported,Eliminations (profit elimination on sales to 2025 Partnership; = Total less segments),Adjusted EBITDA,-4.935,2026-07-31 10-Q acc 0001628280-26-051412 (comparative)
+Q2-2025,reported,Total Adjusted EBITDA,Adjusted EBITDA,347.805,2026-07-31 10-Q acc 0001628280-26-051412 (comparative)
+Q3-2025,reported,Aerospace Products,Adjusted EBITDA,180.421,2025-10-29 10-Q acc 0001590364-25-000041
+Q3-2025,reported,Aviation Leasing,Adjusted EBITDA,134.408,2025-10-29 10-Q acc 0001590364-25-000041
+Q3-2025,reported,Corporate and Other,Adjusted EBITDA,-13.54,2025-10-29 10-Q acc 0001590364-25-000041
+Q3-2025,reported,Eliminations (profit elimination on sales to 2025 Partnership; = Total less segments),Adjusted EBITDA,-3.908,2025-10-29 10-Q acc 0001590364-25-000041
+Q3-2025,reported,Total Adjusted EBITDA,Adjusted EBITDA,297.381,2025-10-29 10-Q acc 0001590364-25-000041
+Q4-2025,derived,Aerospace Products,Adjusted EBITDA,195.022,DERIVED: FY (2026-02-27 10-K acc 0001628280-26-012940) less 9M (Q3 10-Q YTD)
+Q4-2025,derived,Aviation Leasing,Adjusted EBITDA,113.212,DERIVED: FY (2026-02-27 10-K acc 0001628280-26-012940) less 9M (Q3 10-Q YTD)
+Q4-2025,derived,Corporate and Other,Adjusted EBITDA,-24.02,DERIVED: FY (2026-02-27 10-K acc 0001628280-26-012940) less 9M (Q3 10-Q YTD)
+Q4-2025,derived,Eliminations (profit elimination on sales to 2025 Partnership; = Total less segments),Adjusted EBITDA,-7.036,DERIVED: FY (2026-02-27 10-K acc 0001628280-26-012940) less 9M (Q3 10-Q YTD)
+Q4-2025,derived,Total Adjusted EBITDA,Adjusted EBITDA,277.178,DERIVED: FY (2026-02-27 10-K acc 0001628280-26-012940) less 9M (Q3 10-Q YTD)
+FY2025,reported,Aerospace Products,Adjusted EBITDA,671.252,2026-02-27 10-K acc 0001628280-26-012940
+FY2025,reported,Aviation Leasing,Adjusted EBITDA,608.912,2026-02-27 10-K acc 0001628280-26-012940
+FY2025,reported,Corporate and Other,Adjusted EBITDA,-66.413,2026-02-27 10-K acc 0001628280-26-012940
+FY2025,reported,Eliminations (profit elimination on sales to 2025 Partnership; = Total less segments),Adjusted EBITDA,-22.829,2026-02-27 10-K acc 0001628280-26-012940
+FY2025,reported,Total Adjusted EBITDA,Adjusted EBITDA,1190.922,2026-02-27 10-K acc 0001628280-26-012940
+Q1-2026,reported,Aerospace Products,Adjusted EBITDA,222.576,2026-05-01 10-Q acc 0001628280-26-029335
+Q1-2026,reported,Aviation Leasing,Adjusted EBITDA,152.959,2026-05-01 10-Q acc 0001628280-26-029335
+Q1-2026,reported,Corporate and Other,Adjusted EBITDA,-39.958,2026-05-01 10-Q acc 0001628280-26-029335
+Q1-2026,reported,Eliminations (profit elimination on sales to 2025 Partnership; = Total less segments),Adjusted EBITDA,-10.0,2026-05-01 10-Q acc 0001628280-26-029335
+Q1-2026,reported,Total Adjusted EBITDA,Adjusted EBITDA,325.577,2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2026,reported,Aerospace Products,Adjusted EBITDA,249.716,2026-07-31 10-Q acc 0001628280-26-051412
+Q2-2026,reported,Aviation Leasing,Adjusted EBITDA,88.21,2026-07-31 10-Q acc 0001628280-26-051412
+Q2-2026,reported,Corporate and Other,Adjusted EBITDA,-39.885,2026-07-31 10-Q acc 0001628280-26-051412
+Q2-2026,reported,Eliminations (profit elimination on sales to 2025 Partnership; = Total less segments),Adjusted EBITDA,-6.597,2026-07-31 10-Q acc 0001628280-26-051412
+Q2-2026,reported,Total Adjusted EBITDA,Adjusted EBITDA,291.444,2026-07-31 10-Q acc 0001628280-26-051412
+Q4-2023,reported,Aerospace Products,Modules SOLD (not produced),61,8-K Ex99.1 2024-02-22 acc 0001140361-24-009042
+FY2023,reported,Aerospace Products,Modules SOLD (not produced),178,8-K Ex99.1 2024-02-22
+Q1-2025,derived (approx.),Aerospace Products,Modules produced (CFM56 refurbished),138,Back-solved: Q2-25 release says 184 modules is +33% vs prior quarter => about 138; not stated directly. UNVERIFIED
+Q2-2025,reported,Aerospace Products,Modules produced/refurbished,184,8-K Ex99.1 2025-07-30 acc 0001140361-25-027877
+Q4-2025,reported (secondary),Aerospace Products,Modules produced/refurbished,228,Q4-25 call/slides (prior research aerospace_margin_quarterly.csv); not in release text
+Q2-2026,reported (secondary),Aerospace Products,Modules produced/refurbished,296,"Q2-26 call (investing.com transcript: 296 modules, +61% y/y); prior research CSV"
+Q3-2025,NOT FOUND,Aerospace Products,Modules produced/refurbished,,not located in free sources this run
+Q1-2026,NOT FOUND,Aerospace Products,Modules produced/refurbished,,not located in free sources this run
+1H2026,reported,Total company,Gain on sale of assets / to 2025 Partnership / insurance recoveries (CFS) USD M,177.937 / 17.633 / 49.545,10-Q Q2-26 acc 0001628280-26-051412 CFS; prior research gains_vs_ebitda.csv: gains about 40% of 1H26 Adj EBITDA
+FY2025,reported,Total company,Gain on sale of assets / to 2025 Partnership / insurance recoveries (CFS) USD M,377.540 / 46.380 / 54.325,"10-K FY25 acc 0001628280-26-012940; about 40% of FY25 Adj EBITDA 1,190.9"
+FY2024,reported,Total company,Gain on sale of assets (CFS) USD M,377.909,10-K FY24; about 44% of FY24 Adj EBITDA 862.1
+note,,,Segment attribution of gains,NOT DISCLOSED,Adjusted EBITDA reconciliations are not split by gain; only the gain on sale to the 2025 Partnership is booked in Aviation Leasing (segment note). Quarterly gains are in cash_flow.csv rows Gain_on_sale_*

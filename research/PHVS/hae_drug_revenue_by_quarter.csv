@@ -1,0 +1,15 @@
+drug,company,period,net_revenue_usd_m,basis,source_url,as_of
+Orladeyo,BioCryst,Q4 2024,124.2,reported (incl. Europe),https://www.sec.gov/Archives/edgar/data/882796/000117184325001020/exh_991.htm,2025-02-24
+Orladeyo,BioCryst,Q1 2025,134.2,reported (incl. Europe),https://www.sec.gov/Archives/edgar/data/882796/000117184325002739/exh_991.htm,2025-05-05
+Orladeyo,BioCryst,Q2 2025,156.8,reported (incl. Europe),https://www.sec.gov/Archives/edgar/data/882796/000117184325004977/exh_991.htm,2025-08-04
+Orladeyo,BioCryst,Q3 2025,159.1,reported (incl. Europe until 10/1/25 sale),https://www.sec.gov/Archives/edgar/data/882796/000117184325006881/exh_991.htm,2025-11-03
+Orladeyo,BioCryst,Q4 2025,151.7,DERIVED: FY25 601.8 less Q1-Q3,https://www.sec.gov/Archives/edgar/data/882796/000117184326001119/exh_991.htm,2026-02-26
+Orladeyo,BioCryst,Q1 2026,148.3,"reported; +11% y/y, +21% ex-Europe",https://www.sec.gov/Archives/edgar/data/882796/000117184326003052/exh_991.htm,2026-05-06
+Orladeyo,BioCryst,Q2 2026,158.2,"reported; +1% y/y, +10% ex-Europe; FY26 guide 625-645",https://www.sec.gov/Archives/edgar/data/882796/000117184326005223/exh_991.htm,2026-08-05
+Ekterly (sebetralstat),KalVista,Q3 CY2025 (launch 7/7/25),13.692,reported net product revenue,https://www.sec.gov/Archives/edgar/data/1348911/000119312525274442/kalv-20250930.htm,2025-11-10
+Ekterly (sebetralstat),KalVista,Q4 CY2025,35.4,DERIVED: 8-month 49.1 less 13.692 (Jan-8 PR said ~35); US+Germany; holiday pull-forward cited,https://www.sec.gov/Archives/edgar/data/1348911/000119312526124232/kalv-20251231.htm,2026-03-25
+Ekterly (sebetralstat),KalVista,Q1 CY2026,39.165,reported net PRODUCT revenue (total revenue 40.863 incl 1.698 Kaken partnership),https://www.sec.gov/Archives/edgar/data/1348911/000119312526223976/kalv-20260331.htm,2026-05-14
+Dawnzera (donidalorsen),Ionis,Q1 2026,16,DERIVED: H1 42 less Q2 26 (Q2 stated +63% q/q),https://www.sec.gov/Archives/edgar/data/0000874015/000114036126029960/ef20078953_ex99-1.htm,2026-08
+Dawnzera (donidalorsen),Ionis,Q2 2026,26,reported US net product sales; FY26 guide 110-120,https://www.sec.gov/Archives/edgar/data/0000874015/000114036126029960/ef20078953_ex99-1.htm,2026-08
+Andembry (garadacimab),CSL,FY2026 (Jul 2025-Jun 2026),240,"reported, first full year, US$; quarterly not disclosed",https://investors.csl.com/pdf/80148cbc-d117-4b5c-9213-628b0d1de681/Platform/ListPage/CSL-FY2026-Results.pdf,2026-08
+Takhzyro (lanadelumab),Takeda,Apr-Jun 2026 (FQ1 FY26),JPY 59.9bn,-2.2% CER; [UNVERIFIED: search summary only],https://www.biospace.com/press-releases/takeda-announces-fy2026-first-quarter-results-near-term-launch-preparations-and-pipeline-progress-on-track,2026-07-30

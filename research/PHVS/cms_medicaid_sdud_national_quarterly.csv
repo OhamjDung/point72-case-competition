@@ -1,0 +1,45 @@
+product_group,year,quarter,medicaid_rx_count,total_amount_reimbursed_usd
+Andembry,2025,4,102,7077561
+Andembry,2026,1,159,9599793
+Dawnzera,2026,1,44,2537261
+Ekterly,2025,4,56,2680166
+Ekterly,2026,1,120,6752871
+Icatibant (Firazyr+generic+Sajazir),2023,1,424,7570366
+Icatibant (Firazyr+generic+Sajazir),2023,2,426,7240939
+Icatibant (Firazyr+generic+Sajazir),2023,3,465,7071495
+Icatibant (Firazyr+generic+Sajazir),2023,4,410,7438768
+Icatibant (Firazyr+generic+Sajazir),2024,1,368,5866880
+Icatibant (Firazyr+generic+Sajazir),2024,2,459,6541433
+Icatibant (Firazyr+generic+Sajazir),2024,3,481,6146680
+Icatibant (Firazyr+generic+Sajazir),2024,4,453,6541325
+Icatibant (Firazyr+generic+Sajazir),2025,1,454,5828381
+Icatibant (Firazyr+generic+Sajazir),2025,2,442,6702349
+Icatibant (Firazyr+generic+Sajazir),2025,3,485,7062129
+Icatibant (Firazyr+generic+Sajazir),2025,4,421,5361607
+Icatibant (Firazyr+generic+Sajazir),2026,1,366,4566852
+Orladeyo,2023,1,281,11160897
+Orladeyo,2023,2,280,11112824
+Orladeyo,2023,3,288,11453641
+Orladeyo,2023,4,279,11101106
+Orladeyo,2024,1,268,11168534
+Orladeyo,2024,2,292,12330742
+Orladeyo,2024,3,343,14369238
+Orladeyo,2024,4,347,14525636
+Orladeyo,2025,1,341,14724293
+Orladeyo,2025,2,400,17371578
+Orladeyo,2025,3,439,19119321
+Orladeyo,2025,4,402,17584775
+Orladeyo,2026,1,366,17367877
+Takhzyro,2023,1,754,33446750
+Takhzyro,2023,2,705,31127848
+Takhzyro,2023,3,840,35805165
+Takhzyro,2023,4,778,32382563
+Takhzyro,2024,1,769,32761808
+Takhzyro,2024,2,752,32885009
+Takhzyro,2024,3,851,37292500
+Takhzyro,2024,4,808,35112990
+Takhzyro,2025,1,798,35764265
+Takhzyro,2025,2,849,37506786
+Takhzyro,2025,3,923,40999562
+Takhzyro,2025,4,840,36624569
+Takhzyro,2026,1,712,31395000

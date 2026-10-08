@@ -1,0 +1,168 @@
+period,basis,item,value_usd_m,source
+Q1-2023,reported (Q1 = YTD),CFO,38.697,Statement of cash flows YTD (latest vintage): 2024-04-26 10-Q acc 0001590364-24-000011
+Q2-2023,DERIVED: YTD less prior YTD,CFO,28.544,Statement of cash flows YTD (latest vintage): 2024-04-26 10-Q acc 0001590364-24-000011; 2024-08-09 10-Q acc 0001590364-24-000016
+Q3-2023,DERIVED: YTD less prior YTD,CFO,49.525,Statement of cash flows YTD (latest vintage): 2024-08-09 10-Q acc 0001590364-24-000016; 2024-11-12 10-Q acc 0001590364-24-000021
+Q4-2023,DERIVED: YTD less prior YTD,CFO,12.216,Statement of cash flows YTD (latest vintage): 2024-11-12 10-Q acc 0001590364-24-000021; 2025-03-03 10-K acc 0001590364-25-000006
+Q1-2024,reported (Q1 = YTD),CFO,-0.345,Statement of cash flows YTD (latest vintage): 2025-05-05 10-Q acc 0001590364-25-000011
+Q2-2024,DERIVED: YTD less prior YTD,CFO,-187.291,Statement of cash flows YTD (latest vintage): 2025-05-05 10-Q acc 0001590364-25-000011; 2025-07-31 10-Q acc 0001590364-25-000023
+Q3-2024,DERIVED: YTD less prior YTD,CFO,41.483,Statement of cash flows YTD (latest vintage): 2025-07-31 10-Q acc 0001590364-25-000023; 2025-10-29 10-Q acc 0001590364-25-000041
+Q4-2024,DERIVED: YTD less prior YTD,CFO,-41.803,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-02-27 10-K acc 0001628280-26-012940
+Q1-2025,reported (Q1 = YTD),CFO,-25.966,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2025,DERIVED: YTD less prior YTD,CFO,-110.318,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q3-2025,DERIVED: YTD less prior YTD,CFO,4.618,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-07-31 10-Q acc 0001628280-26-051412
+Q4-2025,DERIVED: YTD less prior YTD,CFO,-179.079,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-02-27 10-K acc 0001628280-26-012940
+Q1-2026,reported (Q1 = YTD),CFO,-160.076,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2026,DERIVED: YTD less prior YTD,CFO,-105.227,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q1-2023,reported (Q1 = YTD),CFI,-12.323,Statement of cash flows YTD (latest vintage): 2024-04-26 10-Q acc 0001590364-24-000011
+Q2-2023,DERIVED: YTD less prior YTD,CFI,-89.523,Statement of cash flows YTD (latest vintage): 2024-04-26 10-Q acc 0001590364-24-000011; 2024-08-09 10-Q acc 0001590364-24-000016
+Q3-2023,DERIVED: YTD less prior YTD,CFI,-89.246,Statement of cash flows YTD (latest vintage): 2024-08-09 10-Q acc 0001590364-24-000016; 2024-11-12 10-Q acc 0001590364-24-000021
+Q4-2023,DERIVED: YTD less prior YTD,CFI,-182.257,Statement of cash flows YTD (latest vintage): 2024-11-12 10-Q acc 0001590364-24-000021; 2025-03-03 10-K acc 0001590364-25-000006
+Q1-2024,reported (Q1 = YTD),CFI,-169.213,Statement of cash flows YTD (latest vintage): 2025-05-05 10-Q acc 0001590364-25-000011
+Q2-2024,DERIVED: YTD less prior YTD,CFI,-50.17,Statement of cash flows YTD (latest vintage): 2025-05-05 10-Q acc 0001590364-25-000011; 2025-07-31 10-Q acc 0001590364-25-000023
+Q3-2024,DERIVED: YTD less prior YTD,CFI,-223.348,Statement of cash flows YTD (latest vintage): 2025-07-31 10-Q acc 0001590364-25-000023; 2025-10-29 10-Q acc 0001590364-25-000041
+Q4-2024,DERIVED: YTD less prior YTD,CFI,-26.767,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-02-27 10-K acc 0001628280-26-012940
+Q1-2025,reported (Q1 = YTD),CFI,-27.627,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2025,DERIVED: YTD less prior YTD,CFI,523.775,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q3-2025,DERIVED: YTD less prior YTD,CFI,226.52,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-07-31 10-Q acc 0001628280-26-051412
+Q4-2025,DERIVED: YTD less prior YTD,CFI,0.646,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-02-27 10-K acc 0001628280-26-012940
+Q1-2026,reported (Q1 = YTD),CFI,317.018,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2026,DERIVED: YTD less prior YTD,CFI,198.696,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q1-2023,reported (Q1 = YTD),Proceeds_sale_of_assets_(CFI),153.679,Statement of cash flows YTD (latest vintage): 2024-04-26 10-Q acc 0001590364-24-000011
+Q2-2023,DERIVED: YTD less prior YTD,Proceeds_sale_of_assets_(CFI),119.55,Statement of cash flows YTD (latest vintage): 2023-07-27 10-Q acc 0001590364-23-000023; 2024-04-26 10-Q acc 0001590364-24-000011
+Q3-2023,DERIVED: YTD less prior YTD,Proceeds_sale_of_assets_(CFI),92.836,Statement of cash flows YTD (latest vintage): 2023-07-27 10-Q acc 0001590364-23-000023; 2024-11-12 10-Q acc 0001590364-24-000021
+Q4-2023,DERIVED: YTD less prior YTD,Proceeds_sale_of_assets_(CFI),111.821,Statement of cash flows YTD (latest vintage): 2024-11-12 10-Q acc 0001590364-24-000021; 2025-03-03 10-K acc 0001590364-25-000006
+Q1-2024,reported (Q1 = YTD),Proceeds_sale_of_assets_(CFI),128.384,Statement of cash flows YTD (latest vintage): 2025-05-05 10-Q acc 0001590364-25-000011
+Q2-2024,DERIVED: YTD less prior YTD,Proceeds_sale_of_assets_(CFI),205.276,Statement of cash flows YTD (latest vintage): 2025-05-05 10-Q acc 0001590364-25-000011; 2025-07-31 10-Q acc 0001590364-25-000023
+Q3-2024,DERIVED: YTD less prior YTD,Proceeds_sale_of_assets_(CFI),209.278,Statement of cash flows YTD (latest vintage): 2025-07-31 10-Q acc 0001590364-25-000023; 2025-10-29 10-Q acc 0001590364-25-000041
+Q4-2024,DERIVED: YTD less prior YTD,Proceeds_sale_of_assets_(CFI),426.342,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-02-27 10-K acc 0001628280-26-012940
+Q1-2025,reported (Q1 = YTD),Proceeds_sale_of_assets_(CFI),174.054,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2025,DERIVED: YTD less prior YTD,Proceeds_sale_of_assets_(CFI),415.283,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q3-2025,DERIVED: YTD less prior YTD,Proceeds_sale_of_assets_(CFI),301.097,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-07-31 10-Q acc 0001628280-26-051412
+Q4-2025,DERIVED: YTD less prior YTD,Proceeds_sale_of_assets_(CFI),292.061,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-02-27 10-K acc 0001628280-26-012940
+Q1-2026,reported (Q1 = YTD),Proceeds_sale_of_assets_(CFI),292.281,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2026,DERIVED: YTD less prior YTD,Proceeds_sale_of_assets_(CFI),325.061,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q1-2025,reported (Q1 = YTD),Proceeds_sale_to_2025_Partnership_(CFI),58.892,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2025,DERIVED: YTD less prior YTD,Proceeds_sale_to_2025_Partnership_(CFI),338.256,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q3-2025,DERIVED: YTD less prior YTD,Proceeds_sale_to_2025_Partnership_(CFI),87.96,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-07-31 10-Q acc 0001628280-26-051412
+Q4-2025,DERIVED: YTD less prior YTD,Proceeds_sale_to_2025_Partnership_(CFI),44.862,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-02-27 10-K acc 0001628280-26-012940
+Q1-2026,reported (Q1 = YTD),Proceeds_sale_to_2025_Partnership_(CFI),117.345,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2026,DERIVED: YTD less prior YTD,Proceeds_sale_to_2025_Partnership_(CFI),58.312,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q1-2023,reported (Q1 = YTD),Acquisition_of_leasing_equipment_(CFI),-127.513,Statement of cash flows YTD (latest vintage): 2024-04-26 10-Q acc 0001590364-24-000011
+Q2-2023,DERIVED: YTD less prior YTD,Acquisition_of_leasing_equipment_(CFI),-197.949,Statement of cash flows YTD (latest vintage): 2024-04-26 10-Q acc 0001590364-24-000011; 2024-08-09 10-Q acc 0001590364-24-000016
+Q3-2023,DERIVED: YTD less prior YTD,Acquisition_of_leasing_equipment_(CFI),-181.461,Statement of cash flows YTD (latest vintage): 2024-08-09 10-Q acc 0001590364-24-000016; 2024-11-12 10-Q acc 0001590364-24-000021
+Q4-2023,DERIVED: YTD less prior YTD,Acquisition_of_leasing_equipment_(CFI),-242.857,Statement of cash flows YTD (latest vintage): 2024-11-12 10-Q acc 0001590364-24-000021; 2025-03-03 10-K acc 0001590364-25-000006
+Q1-2024,reported (Q1 = YTD),Acquisition_of_leasing_equipment_(CFI),-276.99,Statement of cash flows YTD (latest vintage): 2025-05-05 10-Q acc 0001590364-25-000011
+Q2-2024,DERIVED: YTD less prior YTD,Acquisition_of_leasing_equipment_(CFI),-159.19,Statement of cash flows YTD (latest vintage): 2025-05-05 10-Q acc 0001590364-25-000011; 2025-07-31 10-Q acc 0001590364-25-000023
+Q3-2024,DERIVED: YTD less prior YTD,Acquisition_of_leasing_equipment_(CFI),-186.186,Statement of cash flows YTD (latest vintage): 2025-07-31 10-Q acc 0001590364-25-000023; 2025-10-29 10-Q acc 0001590364-25-000041
+Q4-2024,DERIVED: YTD less prior YTD,Acquisition_of_leasing_equipment_(CFI),-524.975,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-02-27 10-K acc 0001628280-26-012940
+Q1-2025,reported (Q1 = YTD),Acquisition_of_leasing_equipment_(CFI),-267.417,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2025,DERIVED: YTD less prior YTD,Acquisition_of_leasing_equipment_(CFI),-144.719,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q3-2025,DERIVED: YTD less prior YTD,Acquisition_of_leasing_equipment_(CFI),-77.645,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-07-31 10-Q acc 0001628280-26-051412
+Q4-2025,DERIVED: YTD less prior YTD,Acquisition_of_leasing_equipment_(CFI),-169.018,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-02-27 10-K acc 0001628280-26-012940
+Q1-2026,reported (Q1 = YTD),Acquisition_of_leasing_equipment_(CFI),-87.793,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2026,DERIVED: YTD less prior YTD,Acquisition_of_leasing_equipment_(CFI),-75.261,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q1-2023,reported (Q1 = YTD),Investment_in_unconsolidated_entities_(CFI),-19.5,Statement of cash flows YTD (latest vintage): 2023-04-27 10-Q acc 0001590364-23-000013
+Q2-2023,DERIVED: YTD less prior YTD,Investment_in_unconsolidated_entities_(CFI),0.0,Statement of cash flows YTD (latest vintage): 2023-04-27 10-Q acc 0001590364-23-000013; 2023-07-27 10-Q acc 0001590364-23-000023
+Q3-2023,DERIVED: YTD less prior YTD,Investment_in_unconsolidated_entities_(CFI),0.0,Statement of cash flows YTD (latest vintage): 2023-07-27 10-Q acc 0001590364-23-000023; 2023-10-26 10-Q acc 0001590364-23-000028
+Q4-2023,DERIVED: YTD less prior YTD,Investment_in_unconsolidated_entities_(CFI),0.0,Statement of cash flows YTD (latest vintage): 2023-10-26 10-Q acc 0001590364-23-000028; 2024-02-26 10-K acc 0001590364-24-000003
+Q1-2025,reported (Q1 = YTD),Investment_in_unconsolidated_entities_(CFI),-19.967,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2025,DERIVED: YTD less prior YTD,Investment_in_unconsolidated_entities_(CFI),-98.76,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q3-2025,DERIVED: YTD less prior YTD,Investment_in_unconsolidated_entities_(CFI),-69.971,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-07-31 10-Q acc 0001628280-26-051412
+Q4-2025,DERIVED: YTD less prior YTD,Investment_in_unconsolidated_entities_(CFI),-139.848,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-02-27 10-K acc 0001628280-26-012940
+Q1-2026,reported (Q1 = YTD),Investment_in_unconsolidated_entities_(CFI),-1.246,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2026,DERIVED: YTD less prior YTD,Investment_in_unconsolidated_entities_(CFI),-98.005,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q1-2023,reported (Q1 = YTD),Acquisition_of_PP&E_(CFI),-1.451,Statement of cash flows YTD (latest vintage): 2024-04-26 10-Q acc 0001590364-24-000011
+Q2-2023,DERIVED: YTD less prior YTD,Acquisition_of_PP&E_(CFI),-0.847,Statement of cash flows YTD (latest vintage): 2024-04-26 10-Q acc 0001590364-24-000011; 2024-08-09 10-Q acc 0001590364-24-000016
+Q3-2023,DERIVED: YTD less prior YTD,Acquisition_of_PP&E_(CFI),-1.608,Statement of cash flows YTD (latest vintage): 2024-08-09 10-Q acc 0001590364-24-000016; 2024-11-12 10-Q acc 0001590364-24-000021
+Q4-2023,DERIVED: YTD less prior YTD,Acquisition_of_PP&E_(CFI),-2.242,Statement of cash flows YTD (latest vintage): 2024-11-12 10-Q acc 0001590364-24-000021; 2025-03-03 10-K acc 0001590364-25-000006
+Q1-2024,reported (Q1 = YTD),Acquisition_of_PP&E_(CFI),-1.312,Statement of cash flows YTD (latest vintage): 2025-05-05 10-Q acc 0001590364-25-000011
+Q2-2024,DERIVED: YTD less prior YTD,Acquisition_of_PP&E_(CFI),-1.159,Statement of cash flows YTD (latest vintage): 2025-05-05 10-Q acc 0001590364-25-000011; 2025-07-31 10-Q acc 0001590364-25-000023
+Q3-2024,DERIVED: YTD less prior YTD,Acquisition_of_PP&E_(CFI),-0.497,Statement of cash flows YTD (latest vintage): 2025-07-31 10-Q acc 0001590364-25-000023; 2025-10-29 10-Q acc 0001590364-25-000041
+Q4-2024,DERIVED: YTD less prior YTD,Acquisition_of_PP&E_(CFI),-6.252,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-02-27 10-K acc 0001628280-26-012940
+Q1-2025,reported (Q1 = YTD),Acquisition_of_PP&E_(CFI),-4.156,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2025,DERIVED: YTD less prior YTD,Acquisition_of_PP&E_(CFI),-6.929,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q3-2025,DERIVED: YTD less prior YTD,Acquisition_of_PP&E_(CFI),-6.426,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-07-31 10-Q acc 0001628280-26-051412
+Q4-2025,DERIVED: YTD less prior YTD,Acquisition_of_PP&E_(CFI),-10.201,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-02-27 10-K acc 0001628280-26-012940
+Q1-2026,reported (Q1 = YTD),Acquisition_of_PP&E_(CFI),-6.641,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2026,DERIVED: YTD less prior YTD,Acquisition_of_PP&E_(CFI),-17.375,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q1-2023,reported (Q1 = YTD),Inventory_change_in_CFO_(negative=outflow),6.984,Statement of cash flows YTD (latest vintage): 2024-04-26 10-Q acc 0001590364-24-000011
+Q2-2023,DERIVED: YTD less prior YTD,Inventory_change_in_CFO_(negative=outflow),-6.973,Statement of cash flows YTD (latest vintage): 2024-04-26 10-Q acc 0001590364-24-000011; 2024-08-09 10-Q acc 0001590364-24-000016
+Q3-2023,DERIVED: YTD less prior YTD,Inventory_change_in_CFO_(negative=outflow),-4.856,Statement of cash flows YTD (latest vintage): 2024-08-09 10-Q acc 0001590364-24-000016; 2024-11-12 10-Q acc 0001590364-24-000021
+Q4-2023,DERIVED: YTD less prior YTD,Inventory_change_in_CFO_(negative=outflow),-27.039,Statement of cash flows YTD (latest vintage): 2024-11-12 10-Q acc 0001590364-24-000021; 2025-03-03 10-K acc 0001590364-25-000006
+Q1-2024,reported (Q1 = YTD),Inventory_change_in_CFO_(negative=outflow),-6.877,Statement of cash flows YTD (latest vintage): 2025-05-05 10-Q acc 0001590364-25-000011
+Q2-2024,DERIVED: YTD less prior YTD,Inventory_change_in_CFO_(negative=outflow),-52.12,Statement of cash flows YTD (latest vintage): 2025-05-05 10-Q acc 0001590364-25-000011; 2025-07-31 10-Q acc 0001590364-25-000023
+Q3-2024,DERIVED: YTD less prior YTD,Inventory_change_in_CFO_(negative=outflow),-104.903,Statement of cash flows YTD (latest vintage): 2025-07-31 10-Q acc 0001590364-25-000023; 2025-10-29 10-Q acc 0001590364-25-000041
+Q4-2024,DERIVED: YTD less prior YTD,Inventory_change_in_CFO_(negative=outflow),-42.98,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-02-27 10-K acc 0001628280-26-012940
+Q1-2025,reported (Q1 = YTD),Inventory_change_in_CFO_(negative=outflow),-127.211,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2025,DERIVED: YTD less prior YTD,Inventory_change_in_CFO_(negative=outflow),-141.56,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q3-2025,DERIVED: YTD less prior YTD,Inventory_change_in_CFO_(negative=outflow),-123.137,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-07-31 10-Q acc 0001628280-26-051412
+Q4-2025,DERIVED: YTD less prior YTD,Inventory_change_in_CFO_(negative=outflow),-253.556,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-02-27 10-K acc 0001628280-26-012940
+Q1-2026,reported (Q1 = YTD),Inventory_change_in_CFO_(negative=outflow),-186.896,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2026,DERIVED: YTD less prior YTD,Inventory_change_in_CFO_(negative=outflow),-266.163,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q1-2023,reported (Q1 = YTD),"Gain_on_sale_of_assets_(CFO_addback,neg)",-31.657,Statement of cash flows YTD (latest vintage): 2023-04-27 10-Q acc 0001590364-23-000013
+Q2-2023,DERIVED: YTD less prior YTD,"Gain_on_sale_of_assets_(CFO_addback,neg)",-44.303,Statement of cash flows YTD (latest vintage): 2023-04-27 10-Q acc 0001590364-23-000013; 2023-07-27 10-Q acc 0001590364-23-000023
+Q3-2023,DERIVED: YTD less prior YTD,"Gain_on_sale_of_assets_(CFO_addback,neg)",-34.551,Statement of cash flows YTD (latest vintage): 2023-07-27 10-Q acc 0001590364-23-000023; 2024-11-12 10-Q acc 0001590364-24-000021
+Q4-2023,DERIVED: YTD less prior YTD,"Gain_on_sale_of_assets_(CFO_addback,neg)",-50.231,Statement of cash flows YTD (latest vintage): 2024-11-12 10-Q acc 0001590364-24-000021; 2025-03-03 10-K acc 0001590364-25-000006
+Q1-2024,reported (Q1 = YTD),"Gain_on_sale_of_assets_(CFO_addback,neg)",-58.061,Statement of cash flows YTD (latest vintage): 2025-05-05 10-Q acc 0001590364-25-000011
+Q2-2024,DERIVED: YTD less prior YTD,"Gain_on_sale_of_assets_(CFO_addback,neg)",-88.023,Statement of cash flows YTD (latest vintage): 2025-05-05 10-Q acc 0001590364-25-000011; 2025-07-31 10-Q acc 0001590364-25-000023
+Q3-2024,DERIVED: YTD less prior YTD,"Gain_on_sale_of_assets_(CFO_addback,neg)",-98.269,Statement of cash flows YTD (latest vintage): 2025-07-31 10-Q acc 0001590364-25-000023; 2025-10-29 10-Q acc 0001590364-25-000041
+Q4-2024,DERIVED: YTD less prior YTD,"Gain_on_sale_of_assets_(CFO_addback,neg)",-133.556,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-02-27 10-K acc 0001628280-26-012940
+Q1-2025,reported (Q1 = YTD),"Gain_on_sale_of_assets_(CFO_addback,neg)",-8.549,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2025,DERIVED: YTD less prior YTD,"Gain_on_sale_of_assets_(CFO_addback,neg)",-217.567,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q3-2025,DERIVED: YTD less prior YTD,"Gain_on_sale_of_assets_(CFO_addback,neg)",-68.645,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-07-31 10-Q acc 0001628280-26-051412
+Q4-2025,DERIVED: YTD less prior YTD,"Gain_on_sale_of_assets_(CFO_addback,neg)",-82.779,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-02-27 10-K acc 0001628280-26-012940
+Q1-2026,reported (Q1 = YTD),"Gain_on_sale_of_assets_(CFO_addback,neg)",-92.533,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2026,DERIVED: YTD less prior YTD,"Gain_on_sale_of_assets_(CFO_addback,neg)",-85.404,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q1-2025,reported (Q1 = YTD),"Gain_on_sale_to_2025_Partnership_(CFO_addback,neg)",-10.87,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2025,DERIVED: YTD less prior YTD,"Gain_on_sale_to_2025_Partnership_(CFO_addback,neg)",-34.604,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q3-2025,DERIVED: YTD less prior YTD,"Gain_on_sale_to_2025_Partnership_(CFO_addback,neg)",-4.609,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-07-31 10-Q acc 0001628280-26-051412
+Q4-2025,DERIVED: YTD less prior YTD,"Gain_on_sale_to_2025_Partnership_(CFO_addback,neg)",3.703,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-02-27 10-K acc 0001628280-26-012940
+Q1-2026,reported (Q1 = YTD),"Gain_on_sale_to_2025_Partnership_(CFO_addback,neg)",-15.168,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2026,DERIVED: YTD less prior YTD,"Gain_on_sale_to_2025_Partnership_(CFO_addback,neg)",-2.465,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q1-2025,reported (Q1 = YTD),"Gain_on_insurance_recoveries_(CFO_addback,neg)",-30.125,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2025,DERIVED: YTD less prior YTD,"Gain_on_insurance_recoveries_(CFO_addback,neg)",-24.2,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q3-2025,DERIVED: YTD less prior YTD,"Gain_on_insurance_recoveries_(CFO_addback,neg)",0.0,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-07-31 10-Q acc 0001628280-26-051412
+Q4-2025,DERIVED: YTD less prior YTD,"Gain_on_insurance_recoveries_(CFO_addback,neg)",0.0,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-02-27 10-K acc 0001628280-26-012940
+Q1-2026,reported (Q1 = YTD),"Gain_on_insurance_recoveries_(CFO_addback,neg)",-44.595,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2026,DERIVED: YTD less prior YTD,"Gain_on_insurance_recoveries_(CFO_addback,neg)",-4.95,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q1-2025,reported (Q1 = YTD),Proceeds_insurance_settlement_(CFI),30.125,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2025,DERIVED: YTD less prior YTD,Proceeds_insurance_settlement_(CFI),24.2,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q3-2025,DERIVED: YTD less prior YTD,Proceeds_insurance_settlement_(CFI),0.0,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-07-31 10-Q acc 0001628280-26-051412
+Q4-2025,DERIVED: YTD less prior YTD,Proceeds_insurance_settlement_(CFI),0.0,Statement of cash flows YTD (latest vintage): 2025-10-29 10-Q acc 0001590364-25-000041; 2026-02-27 10-K acc 0001628280-26-012940
+Q1-2026,reported (Q1 = YTD),Proceeds_insurance_settlement_(CFI),27.04,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335
+Q2-2026,DERIVED: YTD less prior YTD,Proceeds_insurance_settlement_(CFI),21.293,Statement of cash flows YTD (latest vintage): 2026-05-01 10-Q acc 0001628280-26-029335; 2026-07-31 10-Q acc 0001628280-26-051412
+Q2-2025,company-reported,Adjusted_FCF_company_reported,423.5,8-K Ex99.1 2025-07-30 acc 0001140361-25-027877: Adj FCF = CFO (110.3) + CFI 523.8 + 10.0 adjustment for 50% QuickTurn Europe JV investment; the ONLY EDGAR release with a reconciliation
+Q2-2025,company-reported,Adjusted_FCF_recon_CFO,-110.3,same release
+Q2-2025,company-reported,Adjusted_FCF_recon_CFI,523.8,same release
+Q2-2025,company-reported,Adjusted_FCF_recon_QuickTurn_adj,10.0,same release
+FY2025,"company-reported (call, not on EDGAR)",Adjusted_FCF_company_reported,724.0,"Q4-25 call 2026-02-25 per CFO (secondary summaries: investing.com, fool.com). Figure not in 8-K Ex99.1 acc 0001628280-26-011685. CFO stated it was ""further adjusted for 3 key investments: $52M SCI, $150M Power turbines, $50M hot-section parts"""
+FY2025,derived (analyst arithmetic),CFO_plus_CFI,412.6,cash_flow.csv: FY25 CFO (310.745) + CFI 723.314 (10-K acc 0001628280-26-012940)
+FY2025,derived (analyst arithmetic),Management_3_named_investments_addback,252.0,"52 SCI + 150 Power turbines + 50 hot-section parts (call, secondary)"
+FY2025,derived (analyst arithmetic),Unreconciled_residual_after_3_investments,59.4,724.0 - 412.6 - 252.0 = 59.4; candidate components 10.0 QuickTurn + 49.1 acquisition of business (hypothesis from prior research trail.md; unverified)
+Q1-2026,"company-reported (call, not on EDGAR)",Adjusted_FCF_company_reported,158.0,Q1-26 call 2026-04-30 (secondary per trail.md); CFO+CFI = 156.9 from filings
+1H2026,"company-reported (call, not on EDGAR)",Adjusted_FCF_company_reported,255.0,"Q2-26 call 2026-07-30 per CFO McAleese (""$255 million of adjusted free cash flow"") via investing.com transcript; CFO+CFI = 250.4 from 10-Q acc 0001628280-26-051412; mgmt said it included funding final $95M SCI capital call"
+FY2026,guidance,Adjusted_FCF_guidance,878.0,Q2-26 call 2026-07-30; prior guide $915M (investing.com transcript)
+Q1-2025,carried from prior research CSV (cfo_fcf_bridge_quarterly.csv; derived from 10-Q Note 2 Cash Flow Presentation),Cash_paid_engine_aircraft_inventory_in_CFO,15.8,10-Q/10-K Note 2 Cash Flow Presentation; prior research
+Q1-2025,carried from prior research CSV,Mfg_outflows_in_CFO,159.6,10-Q/10-K Note 2; prior research
+Q1-2025,carried from prior research CSV,Inventory_sourced_sale_proceeds_in_CFI,145.4,10-Q/10-K Note 2; prior research
+Q1-2025,carried from prior research CSV,Return_of_capital_from_unconsolidated_CFI,0.0,cash flow statement; prior research (this run could not parse single-value rows reliably)
+Q2-2025,carried from prior research CSV (cfo_fcf_bridge_quarterly.csv; derived from 10-Q Note 2 Cash Flow Presentation),Cash_paid_engine_aircraft_inventory_in_CFO,9.9,10-Q/10-K Note 2 Cash Flow Presentation; prior research
+Q2-2025,carried from prior research CSV,Mfg_outflows_in_CFO,154.4,10-Q/10-K Note 2; prior research
+Q2-2025,carried from prior research CSV,Inventory_sourced_sale_proceeds_in_CFI,270.0,10-Q/10-K Note 2; prior research
+Q2-2025,carried from prior research CSV,Return_of_capital_from_unconsolidated_CFI,0.0,cash flow statement; prior research (this run could not parse single-value rows reliably)
+Q3-2025,carried from prior research CSV (cfo_fcf_bridge_quarterly.csv; derived from 10-Q Note 2 Cash Flow Presentation),Cash_paid_engine_aircraft_inventory_in_CFO,101.5,10-Q/10-K Note 2 Cash Flow Presentation; prior research
+Q3-2025,carried from prior research CSV,Mfg_outflows_in_CFO,164.6,10-Q/10-K Note 2; prior research
+Q3-2025,carried from prior research CSV,Inventory_sourced_sale_proceeds_in_CFI,220.4,10-Q/10-K Note 2; prior research
+Q3-2025,carried from prior research CSV,Return_of_capital_from_unconsolidated_CFI,27.1,cash flow statement; prior research (this run could not parse single-value rows reliably)
+Q4-2025,carried from prior research CSV (cfo_fcf_bridge_quarterly.csv; derived from 10-Q Note 2 Cash Flow Presentation),Cash_paid_engine_aircraft_inventory_in_CFO,197.8,10-Q/10-K Note 2 Cash Flow Presentation; prior research
+Q4-2025,carried from prior research CSV,Mfg_outflows_in_CFO,300.7,10-Q/10-K Note 2; prior research
+Q4-2025,carried from prior research CSV,Inventory_sourced_sale_proceeds_in_CFI,423.1,10-Q/10-K Note 2; prior research
+Q4-2025,carried from prior research CSV,Return_of_capital_from_unconsolidated_CFI,0.0,cash flow statement; prior research (this run could not parse single-value rows reliably)
+Q1-2026,carried from prior research CSV (cfo_fcf_bridge_quarterly.csv; derived from 10-Q Note 2 Cash Flow Presentation),Cash_paid_engine_aircraft_inventory_in_CFO,156.3,10-Q/10-K Note 2 Cash Flow Presentation; prior research
+Q1-2026,carried from prior research CSV,Mfg_outflows_in_CFO,215.9,10-Q/10-K Note 2; prior research
+Q1-2026,carried from prior research CSV,Inventory_sourced_sale_proceeds_in_CFI,280.7,10-Q/10-K Note 2; prior research
+Q1-2026,carried from prior research CSV,Return_of_capital_from_unconsolidated_CFI,0.0,cash flow statement; prior research (this run could not parse single-value rows reliably)
+Q2-2026,carried from prior research CSV (cfo_fcf_bridge_quarterly.csv; derived from 10-Q Note 2 Cash Flow Presentation),Cash_paid_engine_aircraft_inventory_in_CFO,200.3,10-Q/10-K Note 2 Cash Flow Presentation; prior research
+Q2-2026,carried from prior research CSV,Mfg_outflows_in_CFO,295.3,10-Q/10-K Note 2; prior research
+Q2-2026,carried from prior research CSV,Inventory_sourced_sale_proceeds_in_CFI,257.8,10-Q/10-K Note 2; prior research
+Q2-2026,carried from prior research CSV,Return_of_capital_from_unconsolidated_CFI,19.2,cash flow statement; prior research (this run could not parse single-value rows reliably)

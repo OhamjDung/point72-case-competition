@@ -1,0 +1,33 @@
+as_of_date,source,metric,value,unit,note,url
+2026-10-06,stockanalysis.com /forecast,Price,179.44,USD,close 2026-10-06 4pm ET; +8.95% on day,https://stockanalysis.com/stocks/ftai/forecast/
+2026-10-06,stockanalysis.com,Price target - average,364.1,USD,"10 analysts (6 Strong Buy, 4 Buy, 0 Hold); page last updated 2026-09-29",https://stockanalysis.com/stocks/ftai/forecast/
+2026-10-06,stockanalysis.com,Price target - low / high,290 / 600,USD,the 600 is an outlier; no dates given per analyst,same
+2026-10-06,stockanalysis.com,Revenue FY2026 consensus,3900,USD M,+55.4% y/y; FY2027 behind Pro paywall,same
+2026-10-06,stockanalysis.com,EPS FY2026 consensus,5.83,USD,FY2027 behind Pro paywall,same
+2026-10-06,MarketBeat /forecast and /price-target,Price target - average,315.67,USD,"11 analysts: 9 Buy, 2 Hold, 0 Sell (Moderate Buy)",https://www.marketbeat.com/stocks/NASDAQ/FTAI/price-target/
+2026-10-06,MarketBeat,Price target - low / high,225 / 375,USD,low 225 appears stale (pre-Q2 target); high 375 = Citizens JMP 2026-07-15,same
+2026-09-15,MarketBeat itemised actions,Barclays PT,310,USD,lowered from 350; Overweight,same
+2026-08-21,MarketBeat itemised actions,Morgan Stanley PT,360,USD,raised from 319; Overweight,same
+2026-08-04,MarketBeat itemised actions,BTIG PT,350,USD,lowered from 400; Buy,same
+2026-08-02,MarketBeat itemised actions,Jefferies PT,325,USD,reiterated Buy,same
+2026-07-31,MarketBeat itemised actions,Deutsche Bank PT,290,USD,set target (rating not shown),same
+2026-07-27,MarketBeat itemised actions,RBC PT,300,USD,lowered from 350; Outperform (dated BEFORE Q2 release 7/29),same
+2026-07-15,MarketBeat itemised actions,Citizens JMP PT,375,USD,from 325; Market Outperform (BEFORE Q2 release),same
+2026-10-06,Derived from the 7 itemised dated PTs above,Price target - mean / median,330 / 325,USD,"mean of 290,300,310,350,360,375,325; 5 of 7 post-date or coincide with the Q2 print window",derived
+2026-05-21 / 2026-08-03,MarketBeat,Rating changes,Zacks Research Strong-Buy to Hold; Weiss Buy to Hold,,"quant-rating shops, not sell-side analysts",same
+undated (retrieved 2026-10-06),"web search result, site not identified",Price target - average,321.11,USD,"11 analysts, 10 Buy / 1 Hold, low 225, high 400",WebSearch
+undated (retrieved 2026-10-06),"web search result, site not identified",Price target - average,377,USD,low 290 high 600; looks like pre-Q2 mean,WebSearch
+undated,web search result,Revenue FY2026 / EPS FY2026,3770 / 6.47,USD M / USD,"also Q3-26 EPS 1.37, Q4-26 EPS 1.73; likely pre-Q2 vintage",WebSearch
+2026-06-15,vcpscanner.com /estimates,EPS FY2026 / Revenue FY2026,6.86 / 3600,USD / USD M,pre-Q2 vintage; FY2027 consensus not shown,https://www.vcpscanner.com/valuation/ftai/estimates
+2026-10-06,Yahoo Finance /analysis,All estimates,NOT RETRIEVED,,"page returned load error, dashes only",https://finance.yahoo.com/quote/FTAI/analysis/
+2026-10-06,Zacks /quote,All estimates,NOT RETRIEVED,,bot-detection page,https://www.zacks.com/stock/quote/FTAI
+2026-10-06,Nasdaq /price-target,All estimates,NOT RETRIEVED,,fetch timed out,https://www.nasdaq.com/market-activity/stocks/ftai/price-target
+2026-10-06,ANY SOURCE,Price target 238,NOT FOUND,,the $238 figure was not reproduced by any free page; lowest dated PT is 290 (Deutsche Bank); MarketBeat low is 225; note stockanalysis 200-day MA is 235.60,n/a
+n/a,ANY SOURCE,Consensus EBITDA 2026 / 2027,NOT FOUND,,"no free page shows EBITDA consensus; company guide 2026 segment EBITDA 1,525 (1,050 Aero + 475 Leasing); 2027 guide 2,300 (1,400 Aero + 450 Power + 450 Leasing)",8-K Ex99.1 2026-07-29
+n/a,ANY SOURCE,Consensus revenue / EPS FY2027,NOT FOUND,,stockanalysis 2027 is Pro-only,n/a
+2026-10-06,stockanalysis.com /statistics,Market cap,18430,USD M,,https://stockanalysis.com/stocks/ftai/statistics/
+2026-10-06,stockanalysis.com /statistics,Enterprise value,21590,USD M,"approx = mkt cap + 3,500 debt - 337 cash; excludes 65 preferred",same
+2026-10-06,stockanalysis.com,Shares outstanding,102.71,M,vs 102.625M on 6/30/26 balance sheet; diluted weighted 104.04M in Q2-26,same
+2026-10-06,stockanalysis.com,52-week low / high,149.50 / 323.51,USD,,https://stockanalysis.com/stocks/ftai/
+2026-10-06,stockanalysis.com,EV/EBITDA trailing / forward P/E,21.68 / 20.22,x,forward P/E 20.2 conflicts with 179.44 / 5.83 = 30.8x from its own EPS consensus,same
+2026-07-30,barchart.com (search snippet),Post-Q2 stock reaction,-19.4%,,dropped after Q2 print: revenue beat (953.1 vs about 848-858) but EPS miss (1.13 vs about 1.68-1.69),WebSearch

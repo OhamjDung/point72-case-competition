@@ -1,0 +1,6 @@
+transaction_date,insider,code,shares,avg_price_usd,approx_value_$m,source
+2026-10-05,Ophir Nave (director),S,500000,235.53,117.8,Form 4 filed 2026-10-06
+2026-10-01,Volozh/Korolenko/Shtan (CEO/other officers),S,"37,778 / 29,090 / 14,546",234.16,~19.3 combined,Forms 4 filed 2026-10-05 (likely tax-related; not verified)
+2026-08-14,Charles E. Ryan (director),S,50000,263-270,13.3,Form 4 filed 2026-08-18
+2026-09-14,Marc Boroditsky,M+S,7000,208-209,1.5,Form 4 filed 2026-09-16
+2026-09-01,8 directors,A (grants),1352,0,0,Forms 4 filed 2026-09-03

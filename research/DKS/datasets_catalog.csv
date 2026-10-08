@@ -1,0 +1,23 @@
+dataset,what_it_gives,url,status_checked_2026-10-06,use_for
+SEC EDGAR submissions API (DKS CIK 1089063),filings list incl Form 4,https://data.sec.gov/submissions/CIK0001089063.json,200 OK (User-Agent required),insider trades; filings calendar
+SEC XBRL companyfacts DKS,quarterly financial facts,https://data.sec.gov/api/xbrl/companyfacts/CIK0001089063.json,200 OK,model history
+SEC XBRL companyfacts Foot Locker (CIK 850209),standalone FL history FY21-Q2 FY25,https://data.sec.gov/api/xbrl/companyfacts/CIK0000850209.json,200 OK,FL standalone baseline
+Census Monthly Retail Trade (NAICS 45111),sporting goods store sales monthly NSA,https://www.census.gov/retail/mrts/www/mrtssales92-present.xlsx,200 OK (parsed locally; API endpoint returned empty for 45111),industry growth / share proxy
+Census MARTS landing,release schedule,https://www.census.gov/retail/index.html,200 OK,catalyst calendar
+BLS CPI public API (footwear CUUR0000SEAE; men's footwear CUUR0000SEAE01; apparel CUUR0000SAA),price index,https://api.bls.gov/publicAPI/v1/timeseries/data/,200 OK (POST),promotion/pricing test
+FINRA equity short interest,twice-monthly short interest,https://www.finra.org/finra-data/browse-catalog/equity-short-interest/data,200 OK (page),short interest primary source
+Equibles short interest (secondary),DKS short interest history,https://equibles.com/stocks/dks/shortinterest,200 OK,Sept 15 2026 = 8.01M shares
+DKS store locator,store counts by format,https://stores.dickssportinggoods.com/,200 OK,House of Sport / Field House counts & geography (scrape needed)
+Foot Locker store locator,Foot Locker/Champs counts,https://stores.footlocker.com/,200 OK,closure tracking vs plan
+Placer.ai free chain tool (House of Sport),visits and visits per location,https://www.placer.ai/free-tools/chains/dicks-house-of-sport,200 OK (numbers gated),traffic vs legacy stores
+Placer.ai blog (House of Sport),2024 economics and traffic multiple,https://www.placer.ai/blog/dicks-sporting-goods-new-store-formats-driving-visit-outperformance,200 OK (dated 2024-03-15),HoS unit economics baseline
+Placer.ai anchor articles,periodic retail visit posts,https://www.placer.ai/anchor/articles,200 OK,quarterly visit trends
+Google Trends,search interest foot locker / dicks / nike,https://trends.google.com/trends/,429 rate limit on scripted fetch (manual use works),demand proxy
+SFIA participation reports,sports participation by sport,https://sfia.org/resources/,200 OK (reports partly paywalled),category demand
+Nike EDGAR (CIK 320187) 10-Q Q1 FY27,wholesale vs direct,https://www.sec.gov/Archives/edgar/data/0000320187/000032018726000193/nke-20260831.htm,surfaced via search,vendor strategy
+Nike Q1 FY27 press release,NA wholesale/direct,https://www.sec.gov/Archives/edgar/data/0000320187/000032018726000184/q1fy27exhibit991er.htm,fetched (summarised by tool; re-verify),vendor strategy
+Academy Sports 10-Q Q2 FY26,peer comps,https://www.sec.gov/Archives/edgar/data/0001817358/000181735826000149/aso-20260801.htm,surfaced via search,peer benchmark
+JD Sports investor centre (Hibbett owner),peer trading updates,https://www.jdplc.com/investors,not fetched [UNVERIFIED],peer benchmark
+SEC EDGAR 13F full-text/search,institutional holders,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001089063&type=13F,200 OK,ownership shifts
+DKS investor relations,earnings releases and calendar,https://investors.dicks.com/,200 OK,catalysts
+Court filings: W.D. Pa. securities class action (lead plaintiff deadline 2026-11-03),litigation,https://www.placera.se/pressmeddelanden/dick-s-sporting-goods-robbins-llp-urges-dks-stockholders-to-contact-the-firm-for-information-about-the-class-action-lawsuit-against-dick-s-sporting-goods-inc-20260930,law-firm PR via search,legal overhang

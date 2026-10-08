@@ -1,0 +1,10 @@
+instrument,coupon,maturity,principal_face_usd_m_(6/30/26),carrying_value_usd_m_(6/30/26),notes,source
+"Revolving Credit Facility (4th A&R, executed 2026-04-24)",SOFR(adj. term)+1.25-2.00% or Base+0.25-1.00%; commitment fee 0.15-0.30%,2031-04-24,2025.0,0.0,"Commitment $2,025M; $50M LC sublimit; undrawn at 6/30/26 and 12/31/25; first lien on non-aircraft assets per prior research",10-Q Q2-26 Note 6 (acc 0001628280-26-051412)
+Senior Notes due 2028,5.50%,2028-05-01,1000.0,1000.793,Unsecured; carrying includes $0.793M premium,10-Q Q2-26 Note 6
+Senior Notes due 2030,7.875% (shown 7.88%),2030-12-01,500.0,497.682,Unsecured; carrying net of discount,10-Q Q2-26 Note 6
+Senior Notes due 2031,7.00%,2031-05-01,700.0,700.0,Unsecured; issued 2024-04-11,10-Q Q2-26 Note 6
+Senior Notes due 2032,7.00%,2032-06-15,800.0,800.0,Unsecured; issued 2024-06-17,10-Q Q2-26 Note 6
+Senior Notes due 2033,5.875% (shown 5.88%),2033-04-15,500.0,497.905,Unsecured; issued 2024-10-09,10-Q Q2-26 Note 6
+"TOTAL debt (carrying, before issuance costs)",,,3500.0,3496.38,"Unamortized issuance costs (43.060); total debt net 3,453.320. Principal face 3,500.0 = sum of notes",10-Q Q2-26; balance_sheet.csv
+Retired: Senior Notes due 2025,coupon not extracted,2025,0.0,0.0,Outstanding 12/31/23 carrying 652.0; zero by 6/30/24 (redeemed in 2024 refinancing),10-K FY23 / 10-Q Q2-24
+Retired: Senior Notes due 2027,9.75% per indenture exhibit list,2027,0.0,0.0,400.0 at 12/31/23; 130.9 at 6/30/24; 130.5 at 9/30/24; 0 at 12/31/24,10-Qs 2024; 10-K FY24

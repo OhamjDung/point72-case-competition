@@ -1,0 +1,58 @@
+period,item,value_usd_m_or_pct,source / note
+Q1-2025,MRE Contract revenue (engines/modules sold to and exchanged with 2025 Partnership; Aerospace Products segment),100.638,is_quarterly.csv; segment note 10-Q
+Q1-2025,MRE as % of Aerospace segment revenue,27.6,derived
+Q1-2025,MRE as % of total company revenue,20.0,derived
+Q1-2025,Servicing / management fees from Partnership (in Other revenue; Aviation Leasing),0.0,8-K Ex99.1 footnotes (Q4 and Q1-26 releases)
+Q1-2025,Gain on sale of seed aircraft to 2025 Partnership (Aviation Leasing; sign: positive=gain),10.87,"cash_flow.csv CFS add-back (Q4-25 = FY 46.380 less 9M 50.083 = -3.703, i.e. reversal)"
+Q1-2025,Profit elimination on sales to Partnership (reduces equity in earnings; Aerospace),6.95,Segment note 10-Q (3M); 10-K not parsed
+Q1-2025,Accounts receivable from Partnership (balance sheet date),not disclosed in Q1-25 release/10-Q footnote,
+Q1-2025,Other current receivables from Partnership (balance sheet date),not disclosed,
+Q1-2025,Proceeds from sale of seed assets to Partnership (CFI),58.892,cash_flow.csv
+Q2-2025,MRE Contract revenue (engines/modules sold to and exchanged with 2025 Partnership; Aerospace Products segment),69.585,is_quarterly.csv; segment note 10-Q
+Q2-2025,MRE as % of Aerospace segment revenue,14.2,derived
+Q2-2025,MRE as % of total company revenue,10.3,derived
+Q2-2025,Servicing / management fees from Partnership (in Other revenue; Aviation Leasing),2.052,8-K Ex99.1 footnotes (Q4 and Q1-26 releases)
+Q2-2025,Gain on sale of seed aircraft to 2025 Partnership (Aviation Leasing; sign: positive=gain),34.604,"cash_flow.csv CFS add-back (Q4-25 = FY 46.380 less 9M 50.083 = -3.703, i.e. reversal)"
+Q2-2025,Profit elimination on sales to Partnership (reduces equity in earnings; Aerospace),4.935,Segment note 10-Q (3M); 10-K not parsed
+Q2-2025,Accounts receivable from Partnership (balance sheet date),93.576,8-K Ex99.1 2025-07-30
+Q2-2025,Other current receivables from Partnership (balance sheet date),18.141,8-K Ex99.1 2025-07-30
+Q2-2025,Proceeds from sale of seed assets to Partnership (CFI),338.256,cash_flow.csv
+Q3-2025,MRE Contract revenue (engines/modules sold to and exchanged with 2025 Partnership; Aerospace Products segment),58.663,is_quarterly.csv; segment note 10-Q
+Q3-2025,MRE as % of Aerospace segment revenue,11.3,derived
+Q3-2025,MRE as % of total company revenue,8.8,derived
+Q3-2025,Servicing / management fees from Partnership (in Other revenue; Aviation Leasing),3.035,8-K Ex99.1 footnotes (Q4 and Q1-26 releases)
+Q3-2025,Gain on sale of seed aircraft to 2025 Partnership (Aviation Leasing; sign: positive=gain),4.609,"cash_flow.csv CFS add-back (Q4-25 = FY 46.380 less 9M 50.083 = -3.703, i.e. reversal)"
+Q3-2025,Profit elimination on sales to Partnership (reduces equity in earnings; Aerospace),3.908,Segment note 10-Q (3M); 10-K not parsed
+Q3-2025,Accounts receivable from Partnership (balance sheet date),41.556,8-K Ex99.1 2025-10-29
+Q3-2025,Other current receivables from Partnership (balance sheet date),17.585,8-K Ex99.1 2025-10-29
+Q3-2025,Proceeds from sale of seed assets to Partnership (CFI),87.96,cash_flow.csv
+Q4-2025,MRE Contract revenue (engines/modules sold to and exchanged with 2025 Partnership; Aerospace Products segment),106.902,is_quarterly.csv; segment note 10-Q
+Q4-2025,MRE as % of Aerospace segment revenue,19.0,derived
+Q4-2025,MRE as % of total company revenue,16.1,derived
+Q4-2025,Servicing / management fees from Partnership (in Other revenue; Aviation Leasing),4.515,8-K Ex99.1 footnotes (Q4 and Q1-26 releases)
+Q4-2025,Gain on sale of seed aircraft to 2025 Partnership (Aviation Leasing; sign: positive=gain),-3.703,"cash_flow.csv CFS add-back (Q4-25 = FY 46.380 less 9M 50.083 = -3.703, i.e. reversal)"
+Q4-2025,Profit elimination on sales to Partnership (reduces equity in earnings; Aerospace),Q4: not separately disclosed in release; derive from 10-K FY less 9M (FY not parsed),Segment note 10-Q (3M); 10-K not parsed
+Q4-2025,Accounts receivable from Partnership (balance sheet date),47.294,8-K Ex99.1 2026-02-25
+Q4-2025,Other current receivables from Partnership (balance sheet date),20.681,8-K Ex99.1 2026-02-25
+Q4-2025,Proceeds from sale of seed assets to Partnership (CFI),44.862,cash_flow.csv
+Q1-2026,MRE Contract revenue (engines/modules sold to and exchanged with 2025 Partnership; Aerospace Products segment),221.23,is_quarterly.csv; segment note 10-Q
+Q1-2026,MRE as % of Aerospace segment revenue,29.7,derived
+Q1-2026,MRE as % of total company revenue,26.6,derived
+Q1-2026,Servicing / management fees from Partnership (in Other revenue; Aviation Leasing),5.861,8-K Ex99.1 footnotes (Q4 and Q1-26 releases)
+Q1-2026,Gain on sale of seed aircraft to 2025 Partnership (Aviation Leasing; sign: positive=gain),15.168,"cash_flow.csv CFS add-back (Q4-25 = FY 46.380 less 9M 50.083 = -3.703, i.e. reversal)"
+Q1-2026,Profit elimination on sales to Partnership (reduces equity in earnings; Aerospace),10.0,Segment note 10-Q (3M); 10-K not parsed
+Q1-2026,Accounts receivable from Partnership (balance sheet date),35.422,8-K Ex99.1 2026-04-29
+Q1-2026,Other current receivables from Partnership (balance sheet date),18.908,8-K Ex99.1 2026-04-29
+Q1-2026,Proceeds from sale of seed assets to Partnership (CFI),117.345,cash_flow.csv
+Q2-2026,MRE Contract revenue (engines/modules sold to and exchanged with 2025 Partnership; Aerospace Products segment),182.799,is_quarterly.csv; segment note 10-Q
+Q2-2026,MRE as % of Aerospace segment revenue,20.9,derived
+Q2-2026,MRE as % of total company revenue,19.2,derived
+Q2-2026,Servicing / management fees from Partnership (in Other revenue; Aviation Leasing),6.988,8-K Ex99.1 footnotes (Q4 and Q1-26 releases)
+Q2-2026,Gain on sale of seed aircraft to 2025 Partnership (Aviation Leasing; sign: positive=gain),2.465,"cash_flow.csv CFS add-back (Q4-25 = FY 46.380 less 9M 50.083 = -3.703, i.e. reversal)"
+Q2-2026,Profit elimination on sales to Partnership (reduces equity in earnings; Aerospace),6.597,Segment note 10-Q (3M); 10-K not parsed
+Q2-2026,Accounts receivable from Partnership (balance sheet date),25.456,8-K Ex99.1 2026-07-29 / 10-Q acc 0001628280-26-051412
+Q2-2026,Other current receivables from Partnership (balance sheet date),9.267,8-K Ex99.1 2026-07-29 / 10-Q acc 0001628280-26-051412
+Q2-2026,Proceeds from sale of seed assets to Partnership (CFI),58.312,cash_flow.csv
+2025-12-31,"Equity-method investment in 2025 Partnership (19% interest), carrying value",281.74,10-Q Q2-26 acc 0001628280-26-051412 equity method table; company says it invested $291.5M by 12/31/25
+2026-06-30,"Equity-method investment in 2025 Partnership (19% interest), carrying value",365.485,"10-Q Q2-26; invested $95.1M in 1H26, received $19.2M distributions"
+2025-12-31,"Aggregate purchase price of seed aircraft sold to Partnership (all committed assets, cumulative)",700.0,"10-Q Q2-26 note: approx. $700.0M net purchase price, all committed aircraft sold as of 6/30/26"

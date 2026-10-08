@@ -1,0 +1,9 @@
+pillar,value_per_share_with,value_per_share_without,delta,evidence_strength_1to5,the_insight
+Consensus-style SOTP+FCF (no pillars),308.5,,,,Reference: 2027 guide $2.3B EBITDA at 18x/10x/8x blended 50/50 with FCF yield at 65% conversion
+Full thesis (all pillars; Power p=50%),198.3,,,,Even all pillars together stay above the $179.44 price
+P1 FCF definition gap (conv 45% vs 65%),198.3,243.2,44.9,3,Yes - largest swing but only 2026 definition ties; FY25 $724M unreconciled
+P2 gains in EBITDA ($350M at 8x vs 18x),198.3,215.3,17.0,4,Partly - verified in filings; gains share falling (44% FY24 to 40% 1H26)
+P3 related-party haircut (30% of 25% of Aero EBITDA),198.3,207.5,9.2,3,No - small; SCI is 25% of 1H26 Aero revenue but profit split undisclosed
+P4 margin 27% vs 30% guide,198.3,210.5,12.3,4,No - mgmt already guides about 30%; further slide is extrapolation
+P5 Power counter-pillar (p=50% vs 100%),198.3,220.2,21.9,2,Yes - decides break-even: ex-Power thesis value is $176 vs price $179
+Power probability sweep p=0/25/50/75/100%,"176.4/187.3/198.3/209.2/220.2",,,,Short breaks even at p about 8% under full thesis

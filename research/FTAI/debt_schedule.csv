@@ -1,0 +1,8 @@
+instrument,principal_$M_(6/30/26),coupon,maturity,annual_cash_interest_$M,security
+Revolving Credit Facility ($2.025B commitment),0,SOFR+1.25-2.00%,2031-04-24,commitment fee 0.15-0.30%,"First lien on substantially all non-aircraft assets incl. inventory, receivables, IP (Apr-2026 A&R)"
+Senior Notes 2028,1000.0,5.50%,2028-05-01,55.0,Unsecured
+Senior Notes 2030,500.0,7.875%,2030-12-01,39.4,Unsecured
+Senior Notes 2031,700.0,7.00%,2031-05-01,49.0,Unsecured
+Senior Notes 2032,800.0,7.00%,2032-06-15,56.0,Unsecured
+Senior Notes 2033,500.0,5.875%,2033-04-15,29.4,Unsecured
+Total face,3500.0,wtd ~6.5%,,228.8,10-K: $228.8M interest due next 12m

@@ -1,0 +1,39 @@
+source,brand,generic,period,gross_spend_usd,claims,beneficiaries,note
+Part D Spending by Drug (annual DY24 file),Firazyr,Icatibant Acetate,2020,72629981.68,1403,339,2025 redesign confounds 2024->2025
+Part D Spending by Drug (annual DY24 file),Firazyr,Icatibant Acetate,2021,61220572.26,1112,282,2025 redesign confounds 2024->2025
+Part D Spending by Drug (annual DY24 file),Firazyr,Icatibant Acetate,2022,61586151.98,1101,261,2025 redesign confounds 2024->2025
+Part D Spending by Drug (annual DY24 file),Firazyr,Icatibant Acetate,2023,56351521.26,920,213,2025 redesign confounds 2024->2025
+Part D Spending by Drug (annual DY24 file),Firazyr,Icatibant Acetate,2024,43713828.6,719,170,2025 redesign confounds 2024->2025
+Part D Spending by Drug (annual DY24 file),Icatibant,Icatibant Acetate,2020,52248857.75,1613,428,2025 redesign confounds 2024->2025
+Part D Spending by Drug (annual DY24 file),Icatibant,Icatibant Acetate,2021,45665547.78,1972,522,2025 redesign confounds 2024->2025
+Part D Spending by Drug (annual DY24 file),Icatibant,Icatibant Acetate,2022,44058776.88,2134,575,2025 redesign confounds 2024->2025
+Part D Spending by Drug (annual DY24 file),Icatibant,Icatibant Acetate,2023,43496319.52,1971,546,2025 redesign confounds 2024->2025
+Part D Spending by Drug (annual DY24 file),Icatibant,Icatibant Acetate,2024,32477428.42,2447,658,2025 redesign confounds 2024->2025
+Part D Spending by Drug (annual DY24 file),Orladeyo,Berotralstat Hydrochloride,2021,26481757.02,691,104,2025 redesign confounds 2024->2025
+Part D Spending by Drug (annual DY24 file),Orladeyo,Berotralstat Hydrochloride,2022,47943573.38,1236,162,2025 redesign confounds 2024->2025
+Part D Spending by Drug (annual DY24 file),Orladeyo,Berotralstat Hydrochloride,2023,52329472.59,1293,158,2025 redesign confounds 2024->2025
+Part D Spending by Drug (annual DY24 file),Orladeyo,Berotralstat Hydrochloride,2024,77894702.6,1835,221,2025 redesign confounds 2024->2025
+Part D Spending by Drug (annual DY24 file),Sajazir,Icatibant Acetate,2022,1019384.57,61,16,2025 redesign confounds 2024->2025
+Part D Spending by Drug (annual DY24 file),Sajazir,Icatibant Acetate,2023,2908596.27,148,43,2025 redesign confounds 2024->2025
+Part D Spending by Drug (annual DY24 file),Sajazir,Icatibant Acetate,2024,1966671.11,150,48,2025 redesign confounds 2024->2025
+Part D Spending by Drug (annual DY24 file),Takhzyro,Lanadelumab-Flyo,2020,151333291.05,3295,350,2025 redesign confounds 2024->2025
+Part D Spending by Drug (annual DY24 file),Takhzyro,Lanadelumab-Flyo,2021,174024500.42,3809,394,2025 redesign confounds 2024->2025
+Part D Spending by Drug (annual DY24 file),Takhzyro,Lanadelumab-Flyo,2022,192066439.76,4189,428,2025 redesign confounds 2024->2025
+Part D Spending by Drug (annual DY24 file),Takhzyro,Lanadelumab-Flyo,2023,194367297.26,4162,468,2025 redesign confounds 2024->2025
+Part D Spending by Drug (annual DY24 file),Takhzyro,Lanadelumab-Flyo,2024,223004902.8,4752,512,2025 redesign confounds 2024->2025
+Part D Quarterly Spending by Drug (RQ2603),Andembry Autoinjector,Garadacimab-Gxii,2025 (Q1-Q4),23173897.60,309,99.0,2025 = full year; 2026 = Q1 only
+Part D Quarterly Spending by Drug (RQ2603),Dawnzera,Donidalorsen Sodium,2025 (Q1-Q4),1845383.96,32,14.0,2025 = full year; 2026 = Q1 only
+Part D Quarterly Spending by Drug (RQ2603),Ekterly,Sebetralstat,2025 (Q1-Q4),17134515.48,228,115.0,2025 = full year; 2026 = Q1 only
+Part D Quarterly Spending by Drug (RQ2603),Firazyr,Icatibant Acetate,2025 (Q1-Q4),32147324.12,682,168.0,2025 = full year; 2026 = Q1 only
+Part D Quarterly Spending by Drug (RQ2603),Icatibant,Icatibant Acetate,2025 (Q1-Q4),37618561.69,2819,805.0,2025 = full year; 2026 = Q1 only
+Part D Quarterly Spending by Drug (RQ2603),Orladeyo,Berotralstat Hydrochloride,2025 (Q1-Q4),180314270.71,4056,405.0,2025 = full year; 2026 = Q1 only
+Part D Quarterly Spending by Drug (RQ2603),Sajazir,Icatibant Acetate,2025 (Q1-Q4),9826836.59,371,105.0,2025 = full year; 2026 = Q1 only
+Part D Quarterly Spending by Drug (RQ2603),Takhzyro,Lanadelumab-Flyo,2025 (Q1-Q4),269230956.21,5607,596.0,2025 = full year; 2026 = Q1 only
+Part D Quarterly Spending by Drug (RQ2603),Andembry Autoinjector,Garadacimab-Gxii,2026 (Q1),19321675.53,308,124.0,2025 = full year; 2026 = Q1 only
+Part D Quarterly Spending by Drug (RQ2603),Dawnzera,Donidalorsen Sodium,2026 (Q1),4335436.11,74,32.0,2025 = full year; 2026 = Q1 only
+Part D Quarterly Spending by Drug (RQ2603),Ekterly,Sebetralstat,2026 (Q1),12841308.61,175,91.0,2025 = full year; 2026 = Q1 only
+Part D Quarterly Spending by Drug (RQ2603),Firazyr,Icatibant Acetate,2026 (Q1),6411062.55,144,81.0,2025 = full year; 2026 = Q1 only
+Part D Quarterly Spending by Drug (RQ2603),Icatibant,Icatibant Acetate,2026 (Q1),9445547.74,624,360.0,2025 = full year; 2026 = Q1 only
+Part D Quarterly Spending by Drug (RQ2603),Orladeyo,Berotralstat Hydrochloride,2026 (Q1),49794496.19,1031,349.0,2025 = full year; 2026 = Q1 only
+Part D Quarterly Spending by Drug (RQ2603),Sajazir,Icatibant Acetate,2026 (Q1),2549750.63,83,40.0,2025 = full year; 2026 = Q1 only
+Part D Quarterly Spending by Drug (RQ2603),Takhzyro,Lanadelumab-Flyo,2026 (Q1),58490949.93,1249,476.0,2025 = full year; 2026 = Q1 only

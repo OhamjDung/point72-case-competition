@@ -1,0 +1,6 @@
+period,period_end,fl_net_sales_musd,fl_gross_profit_musd,fl_gross_margin_pct,fl_segment_profit_musd,fl_segment_margin_pct,fl_proforma_comp_pct,dks_net_sales_musd,dks_segment_profit_musd,dks_segment_margin_pct,dks_comp_pct,source
+Q3 FY25 (Sep 8 - Nov 1 2025),2025-11-01,930.9,214.3,23.0,-46.3,-5.0,n/a,3237,n/a,8.9 (non-GAAP op margin),5.7,https://www.sec.gov/Archives/edgar/data/1089063/000108906325000112/dks-20251101xex991earnings.htm
+Q4 FY25 (Nov 2 2025 - Jan 31 2026),2026-01-31,2175.3,544.6,25.0,-5.9,-0.3,n/a,4051,n/a,n/a,n/a,https://www.sec.gov/Archives/edgar/data/1089063/000108906326000005/dks-20260131xex991earnings.htm
+Q1 FY26,2026-05-02,1787.1,498.7,27.9,17.5,1.0,0.6,3377.4,361.0,10.7,6.0,https://www.sec.gov/Archives/edgar/data/1089063/000108906326000021/dks-2026502xex991earningsr.htm
+Q2 FY26,2026-08-01,1736.9,445.8,25.7,-31.9,-1.8,-3.6,3849.9,485.2,12.6,4.9,https://www.sec.gov/Archives/edgar/data/1089063/000108906326000033/dks-2026801xex991earningsr.htm
+H1 FY26,2026-08-01,3524.0,944.4,26.8,-14.4,-0.4,-1.6,7227.3,846.2,11.7,5.4,same as Q2

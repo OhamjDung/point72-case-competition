@@ -1,0 +1,15 @@
+item,shares_m,strike_or_conv_price_usd,moneyness_at_249.87,source
+Basic Class A+B outstanding 30-Jun-2026,271.86,,,Q2 6-K 2026-08-12
+Shares issued in Aug-26 exchange of $800M Jun-25 notes (approx),15.8,,,6-K 2026-08-19
+"NVIDIA pre-funded warrant (strike $0.0001), economically outstanding",21.07,0.0001,in-the-money,"20-F note, 2026-03-11"
+Jun-25 converts remaining $200M (of $1.0B original; 2.00% 2029 / 3.00% 2031) @ $51.45,3.89,51.45,in-the-money,"20-F; Q2 6-K note 12 (accreted principal 587.5+612.5=1,200 = 1,000 x 1.175/1.225)"
+"Sep-25 converts $3,162.5M original (1.00% 2030 / 2.75% 2032) @ $138.75",22.79,138.75,in-the-money,20-F; Q2 6-K note 12
+"Mar-26 converts 1.25% 2031 $2,587.5M @ $183.22",14.12,183.22,in-the-money,Q2 6-K note 12
+"Mar-26 converts 2.625% 2033 $1,750M @ $180.31",9.71,180.31,in-the-money,Q2 6-K note 12
+"Aug-26 converts 0.50% 2030 $3,450M @ $313.46",11.01,313.46,out-of-the-money,6-K 2026-08-24
+"Aug-26 converts 4.50% 2034 $2,300M @ $324.65",7.08,324.65,out-of-the-money,6-K 2026-08-24
+"Economic basic (basic + exchange shares + NVIDIA warrant), m",308.7,,,computed
+Economic basic market cap at $249.87 ($bn),77.1,,,computed
+"TOTAL fully-diluted incl. all converts (m), excl. ATM since 30-Jun, options, RSUs",377.3,,,computed
+Fully-diluted uplift vs reported basic %,38.8,,,computed
+Fully-diluted market cap ($bn),94.3,,,computed

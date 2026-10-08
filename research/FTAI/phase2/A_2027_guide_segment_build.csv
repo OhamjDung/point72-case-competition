@@ -1,0 +1,14 @@
+segment,case,2027_EBITDA_usd_m,driver_1,driver_2,key_assumption,basis
+Aerospace,Bear,1050,1350 modules,0.78 USD m EBITDA per module (about 27-28% margin),Heavy-engine mix keeps margin below 28% and volume reaches only 1350 modules,Analyst estimate; Q2-26 actual 0.84 per module (derived)
+Aerospace,Base,1230,1500 modules,0.82 USD m EBITDA per module (about 29% margin),Volume reaches 1500 (below 1700 target) at near-guide dollars per module,Analyst estimate
+Aerospace,Bull,1430,1700 modules (mgmt target),0.84 USD m EBITDA per module (about 29-30% margin),Management 1700-module target is met at Q2-26 dollars per module,Mgmt 1700 modules from Q2-26 call; 0.84 derived
+Power,Bear,150,20 units recognised in 2027,7.5 USD m EBITDA per unit,First units slip; acceptance lag leaves most of the PO in 2028; performance adjustment (cap 10 pct of 1465 = 146.5) bites,Analyst estimate
+Power,Base,330,44 units (about 75 pct of PO) recognised in 2027,7.5 USD m EBITDA per unit,Batches run through Nov-2027 but acceptance/commissioning lag trims 2027 recognition,Analyst estimate; 7.5 per unit from secondary reports (UNVERIFIED)
+Power,Bull,600,59 units from PO plus about 20 from add-on POs under 5-yr master agreement,7.5 USD m EBITDA per unit,Second PO signed in H1-27 and delivered in 2027; mgmt range 450-750,Mgmt range 450-750 (Q2-26 call)
+Leasing,Bear,270,SCI fees and co-invest 190,Balance-sheet leasing and gains 80,Book run-off continues and SCI II fee ramp is slow,Analyst estimate
+Leasing,Base,360,SCI fees and co-invest 240,Balance-sheet leasing and gains 120,Q2-26 run-rate (88 per quarter less 5 insurance) plus partial SCI II contribution,Q2-26 call components 5/48/35
+Leasing,Bull,450,SCI fees and co-invest 300,Balance-sheet leasing and gains 150,SCI II deploys 2 to 3 bn of aircraft in 2026-27 and gains on sale to SPV II recur,Analyst estimate; guide equals bull
+Total,Bear,1470,,,EV/EBITDA at 21.6bn = 14.7x,
+Total,Base,1920,,,EV/EBITDA at 21.6bn = 11.2x,
+Total,Bull,2480,,,EV/EBITDA at 21.6bn = 8.7x,
+Total,Mgmt guide,2300,,,EV/EBITDA at 21.6bn = 9.4x,Q2-26 8-K 2026-07-29

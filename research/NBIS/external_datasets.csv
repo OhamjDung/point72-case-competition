@@ -1,0 +1,21 @@
+dataset,url,use,verification
+Ornn Compute Price Index (OCPI) H100/H200/B200 daily transacted,https://data.ornn.com/markets/h100-sxm,GPU $/hr trend vs Nebius list,200 checked 2026-10-06
+Silicon Data H100 rental index (SDH100RT),https://www.silicondata.com/products/silicon-index/h100,second price index cross-check,200
+getdeploying GPU price index (provider list prices),https://getdeploying.com/gpu-price-index,list price panel; scrape for Nebius vs peers,200
+Nebius public price list + Oct 1 2026 increase,https://nebius.com/prices,"snapshot weekly; H100 3.85->4.50, B200 7.15->8.50, B300 7.85->9.50",200 (fetched 2026-10-06)
+SEC EDGAR submissions API (NBIS CIK 0001513845),https://data.sec.gov/submissions/CIK0001513845.json,"filing calendar, 6-K/20-F/Form 4",200
+SEC XBRL companyfacts,https://data.sec.gov/api/xbrl/companyfacts/CIK0001513845.json,FY2025 20-F facts,200
+SEC Forms 3/4/5 for NBIS (browse),https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1513845&type=4,insider flow,200
+SEC 13F data sets,https://www.sec.gov/data-research/sec-markets-data/form-13f-data-sets,institutional holders / NVIDIA stake,200
+FINRA equity short interest,https://www.finra.org/finra-data/browse-catalog/equity-short-interest/data,bi-monthly short interest,200
+EIA electricity data browser,https://www.eia.gov/electricity/data/browser/,"state industrial power prices (NJ, MO, PA)",200 (API endpoint api.eia.gov returned 403 without key)
+PJM interconnection queues,https://pjm.com/planning/service-requests/interconnection-queues,NJ/PA load and generation requests,200
+ERCOT resource/large-load info,https://www.ercot.com/gridinfo/resource,Texas comps (no NBIS site yet),200
+NJDEP online portal (air permits),https://www.njdeponline.com/,check DataOne/Vineland air permit status,200
+City of Vineland site (planning board agendas/minutes),https://www.vinelandcity.org,"permits, stop-work, Phase 2 resolution",200
+Cumberland County NJ,https://www.cumberlandcountynj.gov,construction board of appeals,200
+Federal Register,https://www.federalregister.gov,DOE/FERC large-load rulemakings,200
+"CoreWeave IR (comps: backlog, active/contracted power, capex)",https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/default.aspx,"comp metrics: 1.5GW active, 4.2GW contracted, $104.2B backlog (search summary)","from search, not fetched"
+Nebius Q2 2026 shareholder letter PDF,https://assets.nebius.com/assets/a6ecfd85-a6cb-4967-8ef7-9a25bd261f9c/SHLQ226.pdf,"ACV/MW, payback, guidance",200 downloaded
+Google Trends,https://trends.google.com/trends/explore?q=nebius,brand/search interest,429 rate-limited from script; usable in browser
+Internet Archive Wayback (Nebius price history),https://web.archive.org/,historical list prices,DEAD END: service offline 2026-10-06

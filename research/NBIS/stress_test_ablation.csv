@@ -1,0 +1,7 @@
+pillar,value_per_share_with_pillar_usd,value_per_share_without_pillar_usd,delta_usd,gap_vs_250_pct,evidence_strength_1to5
+"T1 delivery slips (NTM avg MW 2,010->1,650; build 1,000->800 MW)",204,250,-46,-19,3
+T2 econ life 3.5y vs 5y (50% pass-through of extra dep on ~$55B gross base),184,250,-66,-26,2
+T3 pricing: 35% of NTM capacity sells +20% over base (spot),289,250,39,16,2
+T3 downside: spot -15% on that 35%,221,250,-29,-12,2
+T4 financing: +20M shares (ATM) and +150bp on ~$20B debt,229,250,-21,-8,4
+Peer re-rating: multiple 8x (CRWV ~6.1x +30% premium) vs market-implied,183,250,-67,-27,2

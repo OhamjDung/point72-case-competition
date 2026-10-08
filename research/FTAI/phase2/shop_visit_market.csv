@@ -1,0 +1,33 @@
+item,value,unit,source,date,status
+CFM56 shop visits 2025 (peak est.),~2500,visits/yr,Aviation Week search summary (aviationweek.com/mro/aircraft-propulsion/cfm56-overhaul-demand-remains-strong-ge-aerospace-says),2026-10-06,UNVERIFIED (older forecast; article body did not restate)
+CFM56 shop visits 2026,2300-2400 (upper end),visits/yr,GE CFO via Aviation Week 2026-09-22; Leeham 2026-07-16,2026-09-22,verified (secondary)
+CFM56 shop visits 2027,~2400,visits/yr,Aviation Week 2026-09-22,2026-09-22,verified (secondary)
+H1-27 CFM56 removals,>+10%,yoy,Aviation Week 2026-09-22,2026-09-22,verified (secondary)
+CFM56 demand "through at least",2028-2029,year,Leeham 2026-07-16 summarising GE Q2-26 call,2026-07-16,verified (secondary)
+CFM56 shop visits 2030,~2000,visits/yr,derived: >4000 CFM-fleet visits split ~50/50 CFM56/LEAP (Aviation Week search summary),2026-10-06,UNVERIFIED
+CFM56 in-service fleet,~28000,engines,GE via Leeham 2026-07-16,2026-07-16,verified (secondary)
+CFM56 retirement rate 2026,1.5-2.0,% of fleet,GE CFO via Aviation Week,2026-09-22,verified (secondary)
+Implied retirements/yr,420-560 (28k fleet) or 210-280 (14.2k active),engines,derived,2026-10-06,derived
+Parked CFM56 aircraft,~1200,aircraft,Aviation Week,2026-09-22,verified (secondary)
+Fleet not yet through 1st shop visit,~30%,share,Leeham/GE Q2-26,2026-07-16,verified (secondary)
+GE spare parts orders 1H26,+34% (delinquencies +20%),yoy,Leeham/GE Q2-26,2026-07-16,verified (secondary)
+Safran civil spare parts 1H26,+27.9%,USD yoy,safran-group.com press release 2026-07-28 (via search summary),2026-07-28,verified (secondary)
+FTAI module capacity,3000,modules/yr,FTAI Q2-26 call (gurufocus 8991870),2026-07-30,verified (secondary)
+FTAI 2026 module guide,1200 (raised from 1050),modules,FTAI Q2-26 call,2026-07-30,verified (secondary)
+FTAI Q2-26 modules,296 (+61% yoy),modules,FTAI Q2-26 call,2026-07-30,verified (secondary)
+Modules per engine convention,3,modules=1 engine,FTAI CEO per trail.md,2026-10-06,company convention
+FTAI 2026 engine-equivalents,400,engines,1200/3,2026-10-06,derived
+FTAI share of 2400 CFM56 SVs,16.7,%,400/2400,2026-10-06,derived
+FTAI share if market incl ~500 V2500 SVs (assumption),13.8,%,400/2900,2026-10-06,derived; V2500 count UNVERIFIED
+Capacity in engine-eq,1000,engines,3000/3,2026-10-06,derived
+Capacity as % of 2400 SVs,41.7,%,1000/2400,2026-10-06,derived
+25% share requirement (2400 SVs),600 engine-eq = 1800 modules,units,derived,2026-10-06,derived
+25% share requirement (2900 SVs),725 engine-eq = 2175 modules,units,derived,2026-10-06,derived
+Capacity utilisation at 25% share,60-72,%,derived,2026-10-06,derived
+Module growth needed 1200 -> 1800-2175,+50% to +81%,,derived,2026-10-06,derived
+25% share on 2030 market (~2000 SVs),500 engine-eq = 1500 modules,units,derived,2026-10-06,derived
+FTAI Power core demand,~100,engines/yr,FTAI Q4-25 call via trail.md,2026-10-06,secondary
+FTAI+Power core need vs retirements,~500-700 vs 210-560,engines,derived,2026-10-06,derived
+CFM materials agreement (GE/Safran JV),signed,,FTAI press release via barchart/finviz,2026-01-22,verified (press release)
+Chromalloy FAA PMA parts for CFM56,HPT NGV; LPT1 NGV; HPT shroud; HPT stage-1 blade (5B/7B),parts,Aviation Week/eplaneai 2025-26,2026-10-06,verified (secondary); FAA DRS PMA list not queried
+Inventory FTAI 6/30/26,1544.6,USD M,10-Q Q2-26 via trail.md,2026-07-31,verified
