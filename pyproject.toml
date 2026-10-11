@@ -1,0 +1,30 @@
+[project]
+name = "dks-model"
+version = "0.1.0"
+description = "Driver-based DKS / Foot Locker financial model engine and Excel workbook generator."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.0",
+    "pandas>=2.2",
+    "pydantic>=2.7",
+    "scipy>=1.13",
+    "XlsxWriter>=3.2",
+]
+
+[project.optional-dependencies]
+test = [
+    "openpyxl>=3.1",
+    "pytest>=8.0",
+]
+
+[build-system]
+requires = ["setuptools>=70", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
