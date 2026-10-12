@@ -48,7 +48,7 @@ def banners_from_config(config: dict) -> list[Banner]:
 
 def match_banner(name: str, banners: list[Banner]) -> Banner | None:
     clean = normalize_quotes(name)
-    return next((b for b in banners if re.search(b.name_regex, clean, re.I)), None)
+    return next((b for b in banners if re.search(b.name_regex, clean, re.IGNORECASE)), None)
 
 
 class PlacesClient:

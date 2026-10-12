@@ -11,11 +11,11 @@ from scraping.store import get_num_comments, upsert_document
 from scraping.text import DELETED_MARKERS, author_hash, tag_companies
 
 # Each listing caps at ~1,000 items; the union widens coverage.
-LISTINGS: list[tuple[str, str | None]] = (
-    [("new", None), ("hot", None), ("rising", None)]
-    + [("top", t) for t in ("all", "year", "month", "week", "day")]
-    + [("controversial", t) for t in ("all", "year", "month")]
-)
+LISTINGS: list[tuple[str, str | None]] = [
+    ("new", None), ("hot", None), ("rising", None),
+    *[("top", t) for t in ("all", "year", "month", "week", "day")],
+    *[("controversial", t) for t in ("all", "year", "month")],
+]
 REQUIRED_ENV = ("REDDIT_CLIENT_ID", "REDDIT_CLIENT_SECRET", "REDDIT_USER_AGENT")
 
 

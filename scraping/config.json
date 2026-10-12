@@ -1,0 +1,40 @@
+{
+  "reddit": {
+    "subreddits": [
+      {"name": "dickssportinggoods", "cohort": "dks"},
+      {"name": "retail", "cohort": "general_retail"},
+      {"name": "TalesFromRetail", "cohort": "general_retail"},
+      {"name": "RantsFromRetail", "cohort": "general_retail"}
+    ],
+    "search_terms": [
+      "dick's", "dicks sporting goods", "foot locker", "house of sport", "inventory",
+      "markdown", "clearance", "understaffed", "staffing", "hours cut", "layoff",
+      "manager", "shipment", "truck", "theft", "returns", "black friday", "holiday"
+    ],
+    "max_more_comments": 32
+  },
+  "places": {
+    "max_tile_depth": 6,
+    "max_details_calls_per_run": 500,
+    "banners": [
+      {"banner": "DICK'S Sporting Goods", "company": "DKS", "cohort": "dks",
+       "query": "DICK'S Sporting Goods", "name_regex": "^dick'?s sporting goods"},
+      {"banner": "DICK'S House of Sport", "company": "DKS", "cohort": "dks",
+       "query": "DICK'S House of Sport", "name_regex": "house of sport"},
+      {"banner": "Golf Galaxy", "company": "DKS", "cohort": "dks",
+       "query": "Golf Galaxy", "name_regex": "^golf galaxy"},
+      {"banner": "Going, Going, Gone!", "company": "DKS", "cohort": "dks",
+       "query": "Going Going Gone sporting goods", "name_regex": "^going,? going,? gone"},
+      {"banner": "Foot Locker", "company": "FL", "cohort": "dks",
+       "query": "Foot Locker", "name_regex": "^(kids )?foot locker"},
+      {"banner": "Champs Sports", "company": "FL", "cohort": "dks",
+       "query": "Champs Sports", "name_regex": "^champs sports"},
+      {"banner": "Academy Sports + Outdoors", "company": "ACADEMY", "cohort": "competitor",
+       "query": "Academy Sports + Outdoors", "name_regex": "^academy sports"},
+      {"banner": "Hibbett", "company": "HIBBETT", "cohort": "competitor",
+       "query": "Hibbett", "name_regex": "^hibbett"},
+      {"banner": "Scheels", "company": "SCHEELS", "cohort": "competitor",
+       "query": "Scheels", "name_regex": "^scheels"}
+    ]
+  }
+}

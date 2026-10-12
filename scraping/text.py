@@ -11,17 +11,17 @@ COMPANY_PATTERNS: dict[str, re.Pattern[str]] = {
     "DKS": re.compile(
         r"\bdick'?s sporting goods\b|\bdick's\b(?!\s+(?:last resort|drive))|\bdsg\b"
         r"|\bhouse of sport\b|\bgolf galaxy\b",
-        re.I,
+        re.IGNORECASE,
     ),
-    "FL": re.compile(r"\b(?:kids )?foot ?locker\b|\bchamps sports\b", re.I),
-    "ACADEMY": re.compile(r"\bacademy sports\b", re.I),
-    "HIBBETT": re.compile(r"\bhibbett\b", re.I),
-    "SCHEELS": re.compile(r"\bscheels\b", re.I),
-    "WALMART": re.compile(r"\bwal-?mart\b", re.I),
+    "FL": re.compile(r"\b(?:kids )?foot ?locker\b|\bchamps sports\b", re.IGNORECASE),
+    "ACADEMY": re.compile(r"\bacademy sports\b", re.IGNORECASE),
+    "HIBBETT": re.compile(r"\bhibbett\b", re.IGNORECASE),
+    "SCHEELS": re.compile(r"\bscheels\b", re.IGNORECASE),
+    "WALMART": re.compile(r"\bwal-?mart\b", re.IGNORECASE),
     "TARGET": re.compile(
-        r"\btarget (?:store|team members?|employees?)\b|\b(?:at|for) target\b", re.I
+        r"\btarget (?:store|team members?|employees?)\b|\b(?:at|for) target\b", re.IGNORECASE
     ),
-    "COSTCO": re.compile(r"\bcostco\b", re.I),
+    "COSTCO": re.compile(r"\bcostco\b", re.IGNORECASE),
 }
 
 US_STATE_CODES = {

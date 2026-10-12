@@ -11,11 +11,11 @@ T1 = datetime(2026, 10, 2, tzinfo=UTC)
 
 
 def doc(**overrides):
-    base = dict(
-        doc_id="reddit:t3_a", platform="reddit", doc_type="post", cohort="dks",
-        community="dickssportinggoods", title="Inventory", body="Too much stock",
-        created_at=T0, collected_at=T0, source_listings=["new"],
-    )
+    base = {
+        "doc_id": "reddit:t3_a", "platform": "reddit", "doc_type": "post", "cohort": "dks",
+        "community": "dickssportinggoods", "title": "Inventory", "body": "Too much stock",
+        "created_at": T0, "collected_at": T0, "source_listings": ["new"],
+    }
     base.update(overrides)
     return Document(**base)
 
@@ -63,11 +63,11 @@ def test_naive_timestamp_rejected():
 
 def test_store_upsert_keeps_discovered_at(tmp_path):
     conn = connect(tmp_path / "s.sqlite")
-    base = dict(
-        store_id="p1", banner="DICK'S Sporting Goods", company="DKS", cohort="dks", priority=0,
-        name="DICK'S Sporting Goods", address=None, city="Dallas", state="TX", postal_code=None,
-        lat=None, lng=None, discovery_query="q",
-    )
+    base = {
+        "store_id": "p1", "banner": "DICK'S Sporting Goods", "company": "DKS", "cohort": "dks", "priority": 0,
+        "name": "DICK'S Sporting Goods", "address": None, "city": "Dallas", "state": "TX", "postal_code": None,
+        "lat": None, "lng": None, "discovery_query": "q",
+    }
     upsert_store(conn, Store(discovered_at=T0, **base))
     upsert_store(conn, Store(discovered_at=T1, **{**base, "name": "DICK'S House of Sport"}))
     store = get_store(conn, "p1")
