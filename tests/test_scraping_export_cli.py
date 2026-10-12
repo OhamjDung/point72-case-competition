@@ -82,3 +82,9 @@ def test_export_neutralizes_spreadsheet_formulas(tmp_path):
     export_all(conn, tmp_path / "out")
     df = pd.read_csv(tmp_path / "out" / "documents.csv", encoding="utf-8-sig")
     assert df.loc[0, "text"] == "'=HYPERLINK(\"http://x\",\"click\")"
+
+
+def test_config_with_utf8_bom_is_accepted(tmp_path, capsys):
+    config = tmp_path / "config.json"
+    config.write_text('{"reddit": {}, "places": {}}', encoding="utf-8-sig")
+    assert main(["--config", str(config), "--db", str(tmp_path / "s.sqlite"), "status"]) == 0

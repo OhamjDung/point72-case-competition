@@ -47,7 +47,7 @@ def _dispatch(args: argparse.Namespace, config: dict, conn: sqlite3.Connection) 
     if args.command == "apify-import":
         from scraping.apify import import_apify
 
-        rows = json.loads(Path(args.input).read_text(encoding="utf-8"))
+        rows = json.loads(Path(args.input).read_text(encoding="utf-8-sig"))
         return import_apify(conn, rows, banners, datetime.now(UTC), _salt())
     salt = _salt() if args.command == "reviews" else ""
     client = PlacesClient()
@@ -83,7 +83,7 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     started = datetime.now(UTC)
     try:
-        config = json.loads(Path(args.config).read_text(encoding="utf-8"))
+        config = json.loads(Path(args.config).read_text(encoding="utf-8-sig"))
         conn = connect(args.db)
         result = _dispatch(args, config, conn)
         record_run(conn, args.command, started, datetime.now(UTC), vars(args), result, "ok")
