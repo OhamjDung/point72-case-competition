@@ -46,7 +46,7 @@ def export_all(conn: sqlite3.Connection, out_dir: str | Path) -> dict:
     )
     docs["text"] = (docs["title"].fillna("") + "\n\n" + docs["body"].fillna("")).str.strip()
     docs = docs[(docs["text"] != "") | docs["rating"].notna()].copy()
-    created = pd.to_datetime(docs["created_at"], utc=True)
+    created = pd.to_datetime(docs["created_at"], utc=True, format="ISO8601")
     docs["char_len"] = docs["text"].str.len()
     docs["fiscal_quarter_approx"] = [fiscal_quarter_approx(t) for t in created]
     docs["voice"] = docs["doc_type"].map(VOICE)

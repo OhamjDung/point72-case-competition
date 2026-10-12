@@ -88,3 +88,16 @@ def test_config_with_utf8_bom_is_accepted(tmp_path, capsys):
     config = tmp_path / "config.json"
     config.write_text('{"reddit": {}, "places": {}}', encoding="utf-8-sig")
     assert main(["--config", str(config), "--db", str(tmp_path / "s.sqlite"), "status"]) == 0
+
+
+def test_export_handles_mixed_timestamp_precision(tmp_path):
+    conn = connect(tmp_path / "s.sqlite")
+    base = {"platform": "reddit", "doc_type": "post", "cohort": "dks", "collected_at": T1,
+            "source_listings": ["new"]}
+    upsert_document(conn, Document(doc_id="reddit:t3_a", title="a",
+                                   created_at=datetime(2026, 6, 8, 19, 8, 38, tzinfo=UTC), **base))
+    upsert_document(conn, Document(doc_id="reddit:t3_b", title="b",
+                                   created_at=datetime(2026, 6, 8, 19, 8, 38, 7330, tzinfo=UTC),
+                                   **base))
+    conn.commit()
+    assert export_all(conn, tmp_path / "out")["documents"] == 2
