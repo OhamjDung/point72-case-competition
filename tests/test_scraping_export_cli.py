@@ -69,3 +69,16 @@ def test_reddit_requires_salt(tmp_path, capsys, monkeypatch):
     monkeypatch.delenv("SCRAPING_AUTHOR_SALT", raising=False)
     assert main(["--db", str(tmp_path / "s.sqlite"), "reddit"]) == 1
     assert "SCRAPING_AUTHOR_SALT" in json.loads(capsys.readouterr().out)["error"]
+
+
+def test_export_neutralizes_spreadsheet_formulas(tmp_path):
+    conn = connect(tmp_path / "s.sqlite")
+    upsert_document(conn, Document(
+        doc_id="reddit:t3_f", platform="reddit", doc_type="post", cohort="general_retail",
+        community="retail", title='=HYPERLINK("http://x","click")', body=None,
+        created_at=datetime(2026, 3, 1, tzinfo=UTC), collected_at=T1, source_listings=["new"],
+    ))
+    conn.commit()
+    export_all(conn, tmp_path / "out")
+    df = pd.read_csv(tmp_path / "out" / "documents.csv", encoding="utf-8-sig")
+    assert df.loc[0, "text"] == "'=HYPERLINK(\"http://x\",\"click\")"

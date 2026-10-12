@@ -119,3 +119,30 @@ def test_make_reddit_requires_env(monkeypatch):
         monkeypatch.delenv(key, raising=False)
     with pytest.raises(RuntimeError, match="REDDIT_CLIENT_ID"):
         make_reddit()
+
+
+def test_refresh_deletions_purges_items_outside_listings(tmp_path):
+    from scraping.reddit import refresh_deletions
+
+    conn = connect(tmp_path / "s.sqlite")
+    run(conn, {"new": [post("p1"), post("p2")]}, T0)
+
+    class InfoReddit:
+        def __init__(self):
+            self.calls = []
+            self.items = {
+                "t3_p1": NS(fullname="t3_p1", author=None, selftext="[deleted]"),
+                "t3_p2": NS(fullname="t3_p2", author="u1", selftext="still here"),
+            }
+
+        def info(self, fullnames):
+            self.calls.append(list(fullnames))
+            return [self.items[f] for f in fullnames if f in self.items]
+
+    reddit = InfoReddit()
+    counts = refresh_deletions(reddit, conn, now=T1, batch=1)
+    assert counts == {"checked": 2, "purged": 1}
+    assert len(reddit.calls) == 2
+    rows = dict(conn.execute("SELECT doc_id, body FROM documents").fetchall())
+    assert rows["reddit:t3_p1"] is None
+    assert rows["reddit:t3_p2"] == "Way too much stock"

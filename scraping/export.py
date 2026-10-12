@@ -17,6 +17,19 @@ EXPORT_COLUMNS = [
 ]
 
 
+FORMULA_PREFIXES = ("=", "+", "-", "@", "\t", "\r")
+
+
+def _csv_safe(frame: pd.DataFrame) -> pd.DataFrame:
+    """Prefix untrusted text that Excel/Sheets would evaluate as a formula."""
+    safe = frame.copy()
+    for column in safe.columns:  # pandas 3 stores text as "str", not object dtype
+        safe[column] = safe[column].map(
+            lambda v: f"'{v}" if isinstance(v, str) and v.startswith(FORMULA_PREFIXES) else v
+        )
+    return safe
+
+
 def fiscal_quarter_approx(ts: datetime) -> str:
     """DKS fiscal year starts in February, labelled by its starting calendar year."""
     year = ts.year if ts.month >= 2 else ts.year - 1
@@ -45,9 +58,9 @@ def export_all(conn: sqlite3.Connection, out_dir: str | Path) -> dict:
         subset=["store_id", "_day", "text", "rating"]
     )
     docs = pd.concat([reviews, docs[~is_review]]).sort_values("created_at")
-    docs[EXPORT_COLUMNS].to_csv(out / "documents.csv", index=False, encoding="utf-8-sig")
+    _csv_safe(docs[EXPORT_COLUMNS]).to_csv(out / "documents.csv", index=False, encoding="utf-8-sig")
     stores = pd.read_sql_query("SELECT * FROM stores", conn)
-    stores.to_csv(out / "stores.csv", index=False, encoding="utf-8-sig")
+    _csv_safe(stores).to_csv(out / "stores.csv", index=False, encoding="utf-8-sig")
     snaps = pd.read_sql_query("SELECT * FROM store_snapshots", conn)
     snaps.to_csv(out / "store_snapshots.csv", index=False, encoding="utf-8-sig")
     return {"documents": len(docs), "stores": len(stores), "snapshots": len(snaps),

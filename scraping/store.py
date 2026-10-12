@@ -68,18 +68,23 @@ def content_hash(title: str | None, body: str | None) -> str:
     return hashlib.sha256(f"{title or ''}\x1f{body or ''}".encode()).hexdigest()
 
 
+def purge_document(conn: sqlite3.Connection, doc_id: str, collected_at: datetime) -> None:
+    """Drop stored text, author hash and edit history for content its author deleted."""
+    conn.execute(
+        "UPDATE documents SET is_deleted = 1, title = NULL, body = NULL, "
+        "author_hash = NULL, content_hash = NULL, company_mentions = '[]', "
+        "last_collected_at = ? WHERE doc_id = ?",
+        (collected_at.isoformat(), doc_id),
+    )
+    conn.execute("DELETE FROM document_versions WHERE doc_id = ?", (doc_id,))
+
+
 def upsert_document(conn: sqlite3.Connection, doc: Document) -> Outcome:
     now = doc.collected_at.isoformat()
     row = conn.execute("SELECT * FROM documents WHERE doc_id = ?", (doc.doc_id,)).fetchone()
     if doc.is_deleted or (row is not None and row["is_deleted"]):
         if row is not None and not row["is_deleted"]:
-            conn.execute(
-                "UPDATE documents SET is_deleted = 1, title = NULL, body = NULL, "
-                "author_hash = NULL, content_hash = NULL, company_mentions = '[]', "
-                "last_collected_at = ? WHERE doc_id = ?",
-                (now, doc.doc_id),
-            )
-            conn.execute("DELETE FROM document_versions WHERE doc_id = ?", (doc.doc_id,))
+            purge_document(conn, doc.doc_id, doc.collected_at)
         return "deleted"
     digest = content_hash(doc.title, doc.body)
     if row is None:

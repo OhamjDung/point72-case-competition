@@ -28,17 +28,19 @@ def _dispatch(args: argparse.Namespace, config: dict, conn: sqlite3.Connection) 
         return export_all(conn, args.output)
     if args.command == "reddit":
         salt = _salt()
-        from scraping.reddit import collect_subreddit, make_reddit
+        from scraping.reddit import collect_subreddit, make_reddit, refresh_deletions
 
         reddit, cfg = make_reddit(), config["reddit"]
         subs = [s for s in cfg["subreddits"] if args.subreddit in (None, s["name"])]
-        return {
+        result: dict = {
             s["name"]: collect_subreddit(
                 reddit, conn, s["name"], s["cohort"], cfg["search_terms"],
                 cfg["max_more_comments"], salt, with_comments=not args.no_comments,
             )
             for s in subs
         }
+        result["deletion_refresh"] = refresh_deletions(reddit, conn)
+        return result
     from scraping.places import PlacesClient, banners_from_config
 
     banners = banners_from_config(config)

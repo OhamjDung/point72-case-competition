@@ -7,7 +7,7 @@ from datetime import UTC, datetime
 from typing import Any
 
 from scraping.schema import Cohort, Document
-from scraping.store import get_num_comments, upsert_document
+from scraping.store import get_num_comments, purge_document, upsert_document
 from scraping.text import DELETED_MARKERS, author_hash, tag_companies
 
 # Each listing caps at ~1,000 items; the union widens coverage.
@@ -116,4 +116,25 @@ def collect_subreddit(
                 counts[upsert_document(conn, comment_to_doc(c, s.id, cohort, name, now, salt))] += 1
                 counts["comments"] += 1
         conn.commit()  # per submission, so an interrupted run keeps its progress
+    return counts
+
+
+def refresh_deletions(
+    reddit: Any, conn: sqlite3.Connection, now: datetime | None = None, batch: int = 100
+) -> dict[str, int]:
+    """Re-check every stored Reddit item, including ones no listing returns any more."""
+    now = now or datetime.now(UTC)
+    ids = [r[0] for r in conn.execute(
+        "SELECT doc_id FROM documents WHERE platform = 'reddit' AND is_deleted = 0"
+    )]
+    counts = {"checked": 0, "purged": 0}
+    for start in range(0, len(ids), batch):
+        fullnames = [doc_id.removeprefix("reddit:") for doc_id in ids[start:start + batch]]
+        for item in reddit.info(fullnames=fullnames):
+            counts["checked"] += 1
+            field = "selftext" if item.fullname.startswith("t3_") else "body"
+            if item.author is None or getattr(item, field, None) in DELETED_MARKERS:
+                purge_document(conn, f"reddit:{item.fullname}", now)
+                counts["purged"] += 1
+        conn.commit()
     return counts

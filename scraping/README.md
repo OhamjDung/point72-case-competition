@@ -50,3 +50,8 @@ Schedule with Windows Task Scheduler if needed.
 - Author-deleted Reddit content is purged on the next run that sees the deletion.
 - `created_at` is when content was posted; `first_collected_at` is when we saw it.
   Retrospective collection is not point-in-time capture.
+- `reddit` ends with a deletion refresh: every stored Reddit item is re-checked (100 per API
+  call) and author-deleted content is purged, even if no listing returns it any more.
+- CSV exports prefix text starting with `=`, `+`, `-`, `@` with `'` so Excel/Sheets never
+  evaluates scraped text as a formula. The SQLite store keeps the raw text; read it from there
+  for sentiment models that must see the exact string.
