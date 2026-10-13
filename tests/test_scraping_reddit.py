@@ -146,3 +146,15 @@ def test_refresh_deletions_purges_items_outside_listings(tmp_path):
     rows = dict(conn.execute("SELECT doc_id, body FROM documents").fetchall())
     assert rows["reddit:t3_p1"] is None
     assert rows["reddit:t3_p2"] == "Way too much stock"
+
+
+def test_comments_fetched_after_earlier_no_comments_run(tmp_path):
+    conn = connect(tmp_path / "s.sqlite")
+    p = post(num_comments=1, comments=[comment()])
+    collect_subreddit(
+        FakeReddit(FakeSubreddit({"new": [p]})), conn, "dickssportinggoods", "dks",
+        [], max_more=8, salt="s", with_comments=False, now=T0,
+    )
+    counts = run(conn, {"new": [p]}, T1)
+    assert counts["comments"] == 1
+    assert p.comments.replace_calls == 1

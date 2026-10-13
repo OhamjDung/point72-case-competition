@@ -33,6 +33,9 @@ CREATE TABLE IF NOT EXISTS store_snapshots (
     store_id TEXT, collected_at TEXT, rating REAL, user_rating_count INTEGER,
     business_status TEXT, PRIMARY KEY (store_id, collected_at)
 );
+CREATE TABLE IF NOT EXISTS comment_fetches (
+    doc_id TEXT PRIMARY KEY, num_comments INTEGER, fetched_at TEXT
+);
 CREATE TABLE IF NOT EXISTS runs (
     run_id TEXT PRIMARY KEY, kind TEXT, started_at TEXT, finished_at TEXT,
     params TEXT, counts TEXT, status TEXT
@@ -115,9 +118,21 @@ def upsert_document(conn: sqlite3.Connection, doc: Document) -> Outcome:
     return "updated" if changed else "unchanged"
 
 
-def get_num_comments(conn: sqlite3.Connection, doc_id: str) -> int | None:
-    row = conn.execute("SELECT num_comments FROM documents WHERE doc_id = ?", (doc_id,)).fetchone()
+def get_comment_fetch(conn: sqlite3.Connection, doc_id: str) -> int | None:
+    """Comment count at the last time this thread's comments were actually fetched."""
+    row = conn.execute(
+        "SELECT num_comments FROM comment_fetches WHERE doc_id = ?", (doc_id,)
+    ).fetchone()
     return None if row is None else row[0]
+
+
+def set_comment_fetch(
+    conn: sqlite3.Connection, doc_id: str, num_comments: int, fetched_at: datetime
+) -> None:
+    conn.execute(
+        "INSERT OR REPLACE INTO comment_fetches VALUES (?, ?, ?)",
+        (doc_id, num_comments, fetched_at.isoformat()),
+    )
 
 
 def upsert_store(conn: sqlite3.Connection, store: Store) -> None:

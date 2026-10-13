@@ -7,7 +7,12 @@ from datetime import UTC, datetime
 from typing import Any
 
 from scraping.schema import Cohort, Document
-from scraping.store import get_num_comments, purge_document, upsert_document
+from scraping.store import (
+    get_comment_fetch,
+    purge_document,
+    set_comment_fetch,
+    upsert_document,
+)
 from scraping.text import DELETED_MARKERS, author_hash, tag_companies
 
 # Each listing caps at ~1,000 items; the union widens coverage.
@@ -105,7 +110,7 @@ def collect_subreddit(
     )
     for s, labels in harvest(reddit.subreddit(name), search_terms).values():
         doc = submission_to_doc(s, cohort, labels, now, salt)
-        previous = get_num_comments(conn, doc.doc_id)
+        previous = get_comment_fetch(conn, doc.doc_id)
         counts[upsert_document(conn, doc)] += 1
         counts["posts"] += 1
         if with_comments and previous is not None and previous == s.num_comments:
@@ -115,6 +120,7 @@ def collect_subreddit(
             for c in s.comments.list():
                 counts[upsert_document(conn, comment_to_doc(c, s.id, cohort, name, now, salt))] += 1
                 counts["comments"] += 1
+            set_comment_fetch(conn, doc.doc_id, s.num_comments, now)
         conn.commit()  # per submission, so an interrupted run keeps its progress
     return counts
 
