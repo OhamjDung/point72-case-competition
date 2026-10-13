@@ -1,0 +1,77 @@
+{
+    "reddit":  {
+                   "subreddits":  [
+                                      {
+                                          "name":  "dickssportinggoods",
+                                          "cohort":  "dks"
+                                      },
+                                      {
+                                          "name":  "retail",
+                                          "cohort":  "general_retail"
+                                      },
+                                      {
+                                          "name":  "TalesFromRetail",
+                                          "cohort":  "general_retail"
+                                      },
+                                      {
+                                          "name":  "RantsFromRetail",
+                                          "cohort":  "general_retail"
+                                      }
+                                  ],
+                   "search_terms":  [
+                                        "dick\u0027s",
+                                        "dicks sporting goods",
+                                        "foot locker",
+                                        "house of sport",
+                                        "inventory",
+                                        "markdown",
+                                        "clearance",
+                                        "understaffed",
+                                        "staffing",
+                                        "hours cut",
+                                        "layoff",
+                                        "manager",
+                                        "shipment",
+                                        "truck",
+                                        "theft",
+                                        "returns",
+                                        "black friday",
+                                        "holiday"
+                                    ],
+                   "max_more_comments":  32
+               },
+    "places":  {
+                   "max_tile_depth":  6,
+                   "max_details_calls_per_run":  890,
+                   "banners":  [
+                                   {
+                                       "banner":  "DICK\u0027S Sporting Goods",
+                                       "company":  "DKS",
+                                       "cohort":  "dks",
+                                       "query":  "DICK\u0027S Sporting Goods",
+                                       "name_regex":  "^dick\u0027?s sporting goods"
+                                   },
+                                   {
+                                       "banner":  "DICK\u0027S House of Sport",
+                                       "company":  "DKS",
+                                       "cohort":  "dks",
+                                       "query":  "DICK\u0027S House of Sport",
+                                       "name_regex":  "house of sport"
+                                   },
+                                   {
+                                       "banner":  "Golf Galaxy",
+                                       "company":  "DKS",
+                                       "cohort":  "dks",
+                                       "query":  "Golf Galaxy",
+                                       "name_regex":  "^golf galaxy"
+                                   },
+                                   {
+                                       "banner":  "Going, Going, Gone!",
+                                       "company":  "DKS",
+                                       "cohort":  "dks",
+                                       "query":  "Going Going Gone sporting goods",
+                                       "name_regex":  "^going,? going,? gone"
+                                   }
+                               ]
+               }
+}

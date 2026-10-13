@@ -58,6 +58,17 @@ Use the project venv: `.venv/Scripts/python.exe` (Python ≥3.11). Fresh setup: 
 - **`alternative_data/`**: validated observations (`contracts.py`) → as-of filtering, dedupe, weekly/monthly/quarterly indicators (`signals.py`) → bounded driver adjustments with caps and cross-segment netting (`translate.py`) → baseline vs adjusted run on a *copy* of inputs (`pipeline.py`) → `evaluate.py` (seeded stress) and `backtest.py` (walk-forward on dated snapshots).
 - **`historical_data/`**: rate-limited, caching SEC client (`http.py`) → filings/companyfacts download with manifest (`acquire.py`) → inline-XBRL/table extraction (`extract.py`) → versioned facts, filing-derived fiscal calendars, quarterly derivation (`normalize.py`, `processing.py`) → precision-based tie-outs with exclusions (`reconcile.py`) → point-in-time seasonal-naive and trailing-growth quarterly forecasts (`forecast.py`) → scoring and review workbook (`validation.py`, `report.py`); `signals.py` handles JEV import and quarterly signal translation.
 
+## Scraping (`scraping/`, branch `scraping`)
+
+Separate package for Reddit (PRAW) and Google Places reviews. Guide: `scraping/README.md`; schema and sentiment approach: `docs/superpowers/plans/2026-10-12-scraping.md`; current data volumes and pending work: `Tom.md`.
+
+- Flow: collectors (`reddit.py`, `places.py`, `reviews.py`, `apify.py`) → unified `Document` rows (`schema.py`) → SQLite upsert with edit versions and deletion purge (`store.py`) → `export.py` (`documents.csv`, `stores.csv`, `store_snapshots.csv`). CLI: `python -m scraping [--config] [--db] {reddit|stores-discover|reviews|apify-import|export|status}`.
+- Tests: `.venv/Scripts/python.exe -m pytest tests/test_scraping_*.py -q --basetemp .pytest-tmp` (offline fakes only). Lint/types: `ruff check scraping tests/test_scraping_*.py`, `mypy scraping --follow-imports skip`.
+- Secrets live in Windows **user** environment variables (`REDDIT_CLIENT_ID`, `REDDIT_CLIENT_SECRET`, `REDDIT_USER_AGENT`, `GOOGLE_MAPS_API_KEY`, `SCRAPING_AUTHOR_SALT`). This Claude Code process predates them, so load them per command in PowerShell: `foreach ($k in ...) { Set-Item "env:$k" ([Environment]::GetEnvironmentVariable($k, "User")) }`. Never write key values into files, and never change the salt.
+- Two databases: Reddit data is in `scraping/data/scraping.sqlite`; DICK'S Google reviews are in `scraping/data/reviews.sqlite`, built with `scraping/config_dks_only.json`. Keeping them separate prevents "database is locked" while a Reddit run holds a write lock during comment fetches.
+- **Google costs Tom money.** Never start `stores-discover` or `reviews` without his go-ahead. Quotas are 500 SearchText/day and 900 GetPlace/day; a 429 means a quota or rate limit was hit, so stop instead of retrying.
+- The `reddit` command finishes with a deletion refresh over all stored Reddit items (~20+ min at current volume). For a fast single-subreddit run, call `collect_subreddit` from a script file. On Windows PowerShell 5.1, don't pass multi-line `python -c` code: it strips double quotes.
+
 ## Invariants
 
 - `src/dks_model/engine.py` must stay byte-equivalent (after newline normalization) to `origin/DuckyDamien-Addition-1:engine.py`. Add behaviour alongside it, not inside it.
