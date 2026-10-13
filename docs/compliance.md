@@ -19,11 +19,11 @@ Status: **prohibited.** Saving review text is the named example.
 
 Data API Terms, https://redditinc.com/policies/data-api-terms ("Last Revised July 20, 2026"); User Agreement, https://redditinc.com/policies/user-agreement ("Effective July 1, 2026"):
 
-- User Agreement: "scraping the Services without Reddit's prior written consent is prohibited". We used the official OAuth API (PRAW), not HTML scraping.
+- User Agreement: "scraping the Services without Reddit's prior written consent is prohibited". We used the official API (PRAW).
 - Data API Terms 2.4: license "to copy and display the User Content using the Data API solely as necessary to ... run your App to your App Users."
 - 3.1: commercial use or "research in excess of rate limits" needs a separate agreement. 3.2: no training AI models on User Content; do not "retain any User Content ... beyond your approved use case".
 
-Our method: read-only API within rate limits, usernames replaced by salted hashes, deleted items purged (re-check of all 17,573 in-scope items on 2026-10-12: 0 deleted). Laya only scores the text (no training).
+Our method: read-only API within rate limits, usernames replaced by salted hashes, deleted items purged (re-check of all 17,573 in-scope items on 2026-10-12: 0 deleted). Laya scores text; no training.
 
 Status: **unclear.** API collection is allowed. Storing the data and republishing raw text go beyond "display".
 
