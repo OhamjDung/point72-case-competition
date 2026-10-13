@@ -1,0 +1,21 @@
+{
+  "scenario": "base",
+  "model_mode": "fixture",
+  "audit_status": "BLOCKED",
+  "reference_share_price": 136.65,
+  "scenario_weighted_value": 261.5433348926859,
+  "rating": "No Recommendation \u2014 Incomplete/Unreconciled",
+  "valuation": {
+    "DCF": 262.56172740065347,
+    "SOTP": 355.79266093051604,
+    "Relative P/E": 214.36064208630066,
+    "Relative FCF yield": 180.97745662398768,
+    "Scenario-weighted DCF": 261.5433348926859
+  },
+  "diagnostics": {
+    "derived_wacc": 0.09340608112740831,
+    "balance_sheet_max_delta": 3.637978807091713e-12,
+    "cash_flow_max_delta": 6.821210263296962e-13,
+    "financing_infeasible": false
+  }
+}

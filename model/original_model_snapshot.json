@@ -1,0 +1,23 @@
+{
+  "snapshot_source": "outputs/DKS_model.xlsx before the formula-linked rebuild",
+  "captured_at": "2026-10-12",
+  "scenario": "base",
+  "model_mode": "legacy illustrative template",
+  "audit_status": "PASS (known false positive; preserved without endorsement)",
+  "reference_share_price": 245.0,
+  "scenario_weighted_value": 162.9084125500158,
+  "rating": "Short / Avoid",
+  "valuation": {
+    "DCF": 165.5733167404658,
+    "SOTP": 294.769908213472,
+    "Relative P/E": 164.8572076048378,
+    "Relative FCF yield": 104.8450669893324
+  },
+  "known_false_positive_audits": [
+    "Balance sheet balances",
+    "Required source metadata present",
+    "Cash balance remains non-negative",
+    "Reverse DCF solve"
+  ],
+  "notes": "This snapshot is retained only for regression attribution. It cannot support a company valuation or recommendation."
+}
