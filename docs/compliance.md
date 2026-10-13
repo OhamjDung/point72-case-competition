@@ -1,6 +1,6 @@
 # Data terms check (P1, 2026-10-12)
 
-Official pages, read 2026-10-12. Not legal advice.
+Official pages, read 2026-10-12.
 
 ## Google Maps reviews
 
@@ -9,7 +9,7 @@ Google Maps Platform Terms of Service, https://cloud.google.com/maps-platform/te
 - 3.2.3(a) "Customer will not export, extract, or otherwise scrape Google Maps Content for use outside the Services. For example, Customer will not: (i) pre-fetch, index, store, reshare, or rehost Google Maps Content outside the services; ... (iii) copy and save business names, addresses, or user reviews".
 - 3.2.3(b) "Customer will not cache Google Maps Content except as expressly permitted under the Maps Service Specific Terms."
 
-Our method: official Places API (New), up to 5 "most relevant" reviews per store, saved to SQLite and `items.csv`.
+Our method: official Places API (New), up to 5 reviews per store, saved locally.
 
 Status: **prohibited.** Saving review text is the named example.
 
@@ -27,4 +27,4 @@ Our method: read-only API within rate limits, usernames replaced by salted hashe
 
 Status: **unclear.** API collection is allowed. Storing the data and republishing raw text go beyond "display".
 
-**Recommendation: USE WITH DISCLOSURE.** Slides show aggregates only. Team decision (Tom, 2026-10-12): the cleaned raw text (no author identifiers) stays in the team's public repo for reproducibility; this is disclosed, and later author deletions are not reflected there.
+**Recommendation: USE WITH DISCLOSURE.** Slides show aggregates only. Team decision: cleaned text (no author identifiers) stays in our public repo for reproducibility, disclosed; later deletions are not reflected there.
