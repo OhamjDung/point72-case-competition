@@ -48,16 +48,23 @@ Run `python src/mock.py --check` to test every `MOCK_` file against the column l
 
 ## File 1: `data/clean/items.csv`
 
-One row per text item (a Reddit post or a Google review). No usernames, profile links, or author identifiers of any kind.
+One row per text item: a Reddit post, a Reddit comment, or a Google review. No usernames, profile links, author hashes, author flairs, or other author identifiers of any kind.
+
+**Which documents are items.** Input is the `scraping` branch export (`scraping/data/exports/documents.csv` and `exports_reviews/documents.csv`, or the SQLite stores behind them). Keep a document if any of these hold:
+- it comes from cohort `dks` (r/dickssportinggoods, or a Google review of a DKS-owned store);
+- its `company_mentions` include `DKS` or `FL`;
+- it is a Google review of a Foot Locker or Champs Sports store.
+
+Drop competitor-store reviews and general-retail posts that mention neither company. Never use the export's `fiscal_quarter_approx` column (it approximates fiscal quarters from calendar months).
 
 | Column | Type | Missing allowed | Meaning |
 |---|---|---|---|
 | `item_id` | str | no | Unique. `{source}_{h}`, where `h` is the first 16 hex characters of the SHA-256 hash of the UTF-8 string `url + "\n" + text`. Pattern `^(reddit\|google)_[0-9a-f]{16}$`. |
-| `source` | str | no | One of `reddit`, `google`. |
-| `banner_hint` | str | yes | Raw location text, unedited: the subreddit name (or a post flair that names a banner) for Reddit, the store or location name for Google. Empty if none. |
-| `text` | str | no | Reddit: title, then two newlines, then body (title only if the body is empty). Google: the review text with any "Edited" prefix removed. Never empty. |
+| `source` | str | no | One of `reddit`, `google` (the export's `google_maps` and `apify_google_maps` both become `google`). |
+| `banner_hint` | str | yes | Raw location text, unedited. Reddit: the subreddit (`community`), or the post's `link_flair` if it names a banner. Google: store banner and city, e.g. `DICK'S Sporting Goods - Plano`. Empty if none. |
+| `text` | str | no | The exact posted text. Reddit: title, then two newlines, then body (title only if the body is empty; body only for comments). Google: the review text with any "Edited" prefix removed. If read from the CSV export, remove the single `'` that `scraping/export.py` adds in front of text starting with `=`, `+`, `-`, `@`, tab, or carriage return. Never empty. |
 | `stars` | float | yes | Google star rating, 1.0 to 5.0. Always empty for Reddit. |
-| `created_exact` | datetime | yes | Exact posting time in UTC (Reddit `created_utc`). Empty for Google. |
+| `created_exact` | datetime | yes | Exact posting time in UTC, when the source gives one: Reddit `created_utc`, Google Places `publishTime` (the export's `created_at`). Empty when only a relative date ("3 months ago") is available. |
 | `date_low` | date | no | Earliest date the item could have been written. |
 | `date_high` | date | no | Latest date the item could have been written. `date_low <= date_high`. |
 | `date_precision` | str | no | One of `exact`, `week`, `month`, `year`. |
@@ -66,8 +73,8 @@ One row per text item (a Reddit post or a Google review). No usernames, profile 
 
 Date rules (from tasks/P1.md):
 
-- Reddit: `date_low = date_high = ` the UTC date of `created_exact`; precision `exact`.
-- Google relative dates are parsed against `scraped_at` into an interval, never a point:
+- Any item with `created_exact` (all Reddit items, and Google reviews with a publish time): `date_low = date_high = ` the UTC date of `created_exact`; precision `exact`.
+- Google reviews with only a relative date are parsed against `scraped_at` into an interval, never a point:
   - "N days ago": [scraped - (N+1) days, scraped - (N-1) days], precision `week`.
   - "a week ago" / "N weeks ago": [scraped - (N+1)*7 days, scraped - N*7 days], precision `week`.
   - "a month ago" / "N months ago": [scraped - (N+1) months, scraped - N months], precision `month`.
@@ -107,7 +114,9 @@ One row per scored item. Every `item_id` must exist in `items.csv`. All `p_` col
 
 ### Frozen Laya questions (do not reword; see CONTEXT.md section 7)
 
-Item prompt:
+Model: Laya (Convai Innovations, Apache-2.0), PyPI package `laya` 0.4.6, English checkpoint `convaiinnovations/laya` at revision `55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851`, 512-token context (longer text is truncated by Laya). `model_version` records package, checkpoint, and revision.
+
+Item prompt (the Laya "state"):
 
 "Source: {source}. Location/community: {banner_hint}. Company context: Dick's Sporting Goods (DKS) operates Dick's Sporting Goods, House of Sport, Golf Galaxy, and Foot Locker stores. Text: {text}"
 
@@ -118,6 +127,16 @@ Item prompt:
 - Q5 stockout (noul): "Does the text report that a product, size, or item the author wanted was unavailable or out of stock?"
 - Q6 intent (choice): up = "the experience makes the author more likely to shop here again"; flat = "no change, or not stated"; down = "the experience makes the author less likely to shop here again".
 - Q7 promo (score, 5 levels): 1 = "discounts not mentioned or irrelevant"; 2 = "discounts mentioned in passing"; 3 = "discounts were one reason among several"; 4 = "discounts were the main reason"; 5 = "the purchase or visit happened only because of a discount".
+
+Laya requires a question sentence (`instructions`) for every question. Q1 and Q5 use their frozen text above. The others use these sentences, frozen on 2026-10-12 before any real item was scored:
+
+- Q2 banner: "Which store or retailer is this text about?"
+- Q3 author: "Who wrote this text?"
+- Q4 topic: "What is the main subject of this text?"
+- Q6 intent: "How does this experience change whether the author will shop here again?"
+- Q7 promo: "How much did discounts drive the purchase or visit?"
+
+Laya returns `probabilities` for choice and score questions and a yes-probability (`noul`) for yes/no questions. Its score levels are counted from 0, so `promo_score_exp` = sum over levels k = 1..5 of k x p(level k), computed from `probabilities`, not from Laya's `score` field.
 
 ## File 3: `data/fundamentals/dks_quarters.csv`
 
@@ -211,9 +230,9 @@ One JSON object with exactly these keys. Missing numbers are `null`.
 | `delta_comp_bp` | float | (pred_ar_laya - pred_ar) x 100, in bp. |
 | `delta_comp_bp_lo80` | float | delta_comp_bp - 1.2816 x beta_se x abs(shock_current) x 100. |
 | `delta_comp_bp_hi80` | float | delta_comp_bp + 1.2816 x beta_se x abs(shock_current) x 100. |
-| `verdict` | str | `nowcast` if the 80% interval [lo80, hi80] excludes zero AND ar_laya out-of-sample MAE < ar out-of-sample MAE (from metrics.csv); otherwise `scenario`. Also `scenario` if shock_current is missing. |
+| `verdict` | str | `nowcast` if the 80% interval for b, [beta - 1.2816 x beta_se, beta + 1.2816 x beta_se], excludes zero AND ar_laya out-of-sample MAE < ar out-of-sample MAE (from metrics.csv); otherwise `scenario`. Also `scenario` if shock_current is missing. |
 
-1.2816 is the normal-distribution multiplier for a central 80% interval. MAE is mean absolute error.
+1.2816 is the normal-distribution multiplier for a central 80% interval. MAE is mean absolute error. The verdict tests b, the signal's coefficient, as the frozen spec in tasks/P2.md states; `delta_comp_bp_lo80` and `delta_comp_bp_hi80` show the size of the effect and do not decide the verdict.
 
 ## File 7: `outputs/metrics.csv`
 

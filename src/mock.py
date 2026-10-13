@@ -8,8 +8,7 @@ Every value written here is invented. Never let a MOCK_ number reach the deck or
 Excel model.
 
 Files 1 to 3 and 9 are generated. Files 4 to 8 are computed from the mock items with the
-CONTRACT.md method, so build_index and run_backtest also serve as reference versions of
-aggregate.py and backtest.py.
+real pipeline code in aggregate.py and backtest.py.
 
 Python 3.10+.
 """
@@ -26,8 +25,12 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-import statsmodels.api as sm
 from dateutil.relativedelta import relativedelta
+
+import aggregate
+import backtest
+from aggregate import BANNERS, INDEX_BANNERS, INDEX_NAMES, MIN_N_EFFECTIVE
+from backtest import LEADLAG_SIGNALS, MODELS, SIGNALS, TARGET_QUARTER
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTRACT = ROOT / "CONTRACT.md"
@@ -35,27 +38,19 @@ CONTRACT = ROOT / "CONTRACT.md"
 SEED = 20261012
 N_ITEMS = 5000
 FIRST_FY = 2021
-LAST_QUARTER = "FY2026Q3"
+LAST_QUARTER = TARGET_QUARTER
+GOOGLE_EXACT_SHARE = 0.75  # Places API reviews carry a publish time; the rest are relative dates
 SCRAPED_AT = datetime(2026, 10, 11, 15, 0, 0, tzinfo=timezone.utc)
 SCORED_AT = datetime(2026, 10, 12, 1, 0, 0, tzinfo=timezone.utc)
 # MOCK ONLY: assume Foot Locker business comps first appear in FY2025Q3.
 # P1 takes the real first quarter from the filings.
 FL_FIRST_QUARTER = "FY2025Q3"
 
-BANNERS = ["dicks", "house_of_sport", "golf_galaxy", "foot_locker", "other"]
-INDEX_BANNERS = ["all"] + BANNERS
 AUTHORS = ["customer", "employee", "other"]
 TOPICS = ["availability", "price_promo", "service_staff", "fulfillment_returns",
           "product_quality", "store_experience", "other"]
 INTENTS = ["up", "flat", "down"]
-INDEX_NAMES = ["intent", "stockout", "promo", "stars"]
-SIGNALS = ["intent_shock", "stockout_shock"]
-MODELS = ["persist", "ar", "ar_laya", "ar_stars", "ar_laya_stockout"]
-LEADLAG_SIGNALS = ["intent_idx", "stockout_idx"]
 AGREEMENT_QUESTIONS = ["relevant", "topic", "stockout", "intent"]
-MIN_N_EFFECTIVE = 15
-MIN_TRAIN = 6
-Z80 = 1.2815515655446004  # normal multiplier for a central 80% interval
 
 PATHS = {
     1: "data/clean/MOCK_items.csv",
@@ -319,20 +314,25 @@ def make_items(rng, quarters: pd.DataFrame, true_comp: np.ndarray) -> tuple[pd.D
             title = f"Question about {product}"
 
         url = f"https://www.example.com/mock/{source}/{i:05d}"
+        latest = 15 * 3600 if day == scraped else 86400  # never after scraped_at
+        created = datetime(day.year, day.month, day.day, tzinfo=timezone.utc) + \
+            timedelta(seconds=int(rng.integers(latest)))
         if source == "reddit":
             text = f"{title}\n\n{body}"
             hint = SUBREDDITS[b][rng.integers(len(SUBREDDITS[b]))]
-            latest = 15 * 3600 if day == scraped else 86400  # never after scraped_at
-            created = datetime(day.year, day.month, day.day, tzinfo=timezone.utc) + \
-                timedelta(seconds=int(rng.integers(latest)))
-            low = high = day
-            precision, created_s, stars = "exact", iso_dt(created), np.nan
+            stars = np.nan
+            exact = True
         else:
             text = body
             hint = f"{STORE_NAMES[b]} - {CITIES[rng.integers(len(CITIES))]}"
+            stars = float(rng.choice({0: [4, 5], 1: [3, 4, 5], 2: [1, 2, 3]}[intent]))
+            exact = rng.random() < GOOGLE_EXACT_SHARE
+        if exact:
+            low = high = day
+            precision, created_s = "exact", iso_dt(created)
+        else:
             low, high, precision = google_interval(day, scraped)
             created_s = ""
-            stars = float(rng.choice({0: [4, 5], 1: [3, 4, 5], 2: [1, 2, 3]}[intent]))
 
         item_id = f"{source}_{hashlib.sha256((url + chr(10) + text).encode('utf-8')).hexdigest()[:16]}"
         items.append({
@@ -370,187 +370,6 @@ def make_agreement(rng) -> dict:
                           for q in AGREEMENT_QUESTIONS]}
 
 
-# ---------------------------------------------------------------- file 4 method
-
-def shock(x: np.ndarray) -> np.ndarray:
-    """CONTRACT.md file 4 step 10: value minus the mean of the non-missing values in the four
-    prior quarters; needs the value and at least 2 prior values."""
-    out = np.full(len(x), np.nan)
-    for j in range(len(x)):
-        prior = x[max(0, j - 4):j]
-        prior = prior[~np.isnan(prior)]
-        if not np.isnan(x[j]) and len(prior) >= 2:
-            out[j] = x[j] - prior.mean()
-    return out
-
-
-def build_index(items: pd.DataFrame, feats: pd.DataFrame, quarters: pd.DataFrame) -> pd.DataFrame:
-    """File 4 from files 1 to 3, following CONTRACT.md file 4 steps 1 to 11."""
-    df = items.merge(feats, on="item_id", how="inner", validate="one_to_one")
-    lo = np.array([date.fromisoformat(d).toordinal() for d in df.date_low])
-    hi = np.array([date.fromisoformat(d).toordinal() for d in df.date_high])
-    qs = np.array([date.fromisoformat(d).toordinal() for d in quarters.period_start])
-    qe = np.array([date.fromisoformat(d).toordinal() for d in quarters.period_end])
-
-    days = np.minimum(hi[:, None], qe[None, :]) - np.maximum(lo[:, None], qs[None, :]) + 1
-    share = np.clip(days, 0, None) / (hi - lo + 1)[:, None]                # step 2
-    weight = share * df.p_relevant.to_numpy()[:, None]                     # step 3
-    banner = np.array(BANNERS)[df[GROUPS["banner"]].to_numpy().argmax(axis=1)]  # step 1
-
-    net = (df.p_intent_up - df.p_intent_down).to_numpy()
-    cust = df.p_author_customer.to_numpy()
-    stock = df.p_stockout.to_numpy()
-    promo = df.promo_score_exp.to_numpy()
-    stars = pd.to_numeric(df.stars, errors="coerce").to_numpy()
-    has_stars = (~np.isnan(stars)).astype(float)
-    stars = np.nan_to_num(stars)
-
-    data_end = max(date.fromisoformat(s[:10]) for s in items.scraped_at).toordinal()
-    cover = np.clip((np.minimum(qe, data_end) - qs + 1) / (qe - qs + 1), 0, 1)  # step 11
-
-    def wmean(values: np.ndarray, w: np.ndarray) -> np.ndarray:
-        den = w.sum(axis=0)
-        with np.errstate(invalid="ignore", divide="ignore"):
-            return np.where(den > 0, (w * values[:, None]).sum(axis=0) / den, np.nan)
-
-    blocks = []
-    for b_pos, b in enumerate(INDEX_BANNERS):
-        m = np.ones(len(df), bool) if b == "all" else banner == b
-        w, s = weight[m], share[m]
-        n_eff = w.sum(axis=0)                                              # step 4
-        idx = {"intent": wmean(net[m], w * cust[m][:, None]),              # step 5
-               "stockout": wmean(stock[m], w),                             # step 6
-               "promo": wmean(promo[m], w),                                # step 7
-               "stars": wmean(stars[m], s * has_stars[m][:, None])}        # step 8
-        block = pd.DataFrame({"fiscal_quarter": quarters.fiscal_quarter.to_numpy(), "banner": b,
-                              "n_items": (s > 0).sum(axis=0), "n_effective": n_eff})
-        for name in INDEX_NAMES:
-            block[f"{name}_idx"] = np.where(n_eff < MIN_N_EFFECTIVE, np.nan, idx[name])  # step 9
-        block["volume_log"] = np.log1p(n_eff)
-        for name in INDEX_NAMES:
-            block[f"{name}_shock"] = shock(block[f"{name}_idx"].to_numpy())  # step 10
-        block["partial"] = cover < 1
-        block["coverage_frac"] = cover
-        block["_q"], block["_b"] = np.arange(len(qs)), b_pos
-        blocks.append(block)
-    out = pd.concat(blocks).sort_values(["_q", "_b"]).reset_index(drop=True)
-    return out[names(4)]
-
-
-# ---------------------------------------------------------------- files 5 to 8 method
-
-def ols(y: np.ndarray, regressors: list[np.ndarray]):
-    """OLS with an intercept and classical standard errors."""
-    X = np.column_stack([np.ones(len(y))] + regressors)
-    return sm.OLS(y, X).fit()
-
-
-def series(index: pd.DataFrame, quarters: pd.DataFrame) -> dict[str, np.ndarray]:
-    """Banner "all" columns aligned to the quarter order, plus comp and its one-quarter lag."""
-    allq = index[index.banner == "all"].set_index("fiscal_quarter").loc[quarters.fiscal_quarter]
-    comp = quarters.comp_pct.to_numpy(float)
-    out = {c: allq[c].to_numpy(float) for c in
-           ["intent_idx", "stockout_idx", "intent_shock", "stockout_shock", "stars_shock"]}
-    out.update(comp=comp, lag=np.r_[np.nan, comp[:-1]], partial=allq.partial.to_numpy(bool))
-    return out
-
-
-def run_backtest(index: pd.DataFrame, quarters: pd.DataFrame) -> pd.DataFrame:
-    """File 5: expanding-window out-of-sample forecasts."""
-    x, qnames = series(index, quarters), list(quarters.fiscal_quarter)
-    comp, lag, stars = x["comp"], x["lag"], x["stars_shock"]
-    rows = []
-    for sig_name in SIGNALS:
-        sig = x[sig_name]
-        elig = [j for j in range(len(qnames))
-                if not (np.isnan(comp[j]) or np.isnan(lag[j]) or np.isnan(sig[j]))]
-        for k in range(MIN_TRAIN, len(elig)):
-            train, t = np.array(elig[:k]), elig[k]
-            a = ols(comp[train], [lag[train]]).params
-            c = ols(comp[train], [lag[train], sig[train]]).params
-            st = train[~np.isnan(stars[train])]
-            pred_stars = np.nan
-            if len(st) >= MIN_TRAIN and not np.isnan(stars[t]):
-                p = ols(comp[st], [lag[st], stars[st]]).params
-                pred_stars = p[0] + p[1] * lag[t] + p[2] * stars[t]
-            rows.append({"fiscal_quarter": qnames[t], "actual": comp[t], "pred_persist": lag[t],
-                         "pred_ar": a[0] + a[1] * lag[t],
-                         "pred_ar_laya": c[0] + c[1] * lag[t] + c[2] * sig[t],
-                         "pred_ar_stars": pred_stars, "signal_used": sig_name,
-                         "train_end_quarter": qnames[train[-1]]})
-    return pd.DataFrame(rows, columns=names(5))
-
-
-def run_metrics(bt: pd.DataFrame) -> pd.DataFrame:
-    """File 7."""
-    prim, sec = bt[bt.signal_used == "intent_shock"], bt[bt.signal_used == "stockout_shock"]
-    source = {"persist": (prim, "pred_persist"), "ar": (prim, "pred_ar"),
-              "ar_laya": (prim, "pred_ar_laya"), "ar_stars": (prim, "pred_ar_stars"),
-              "ar_laya_stockout": (sec, "pred_ar_laya")}
-    rows = []
-    for model in MODELS:
-        frame, column = source[model]
-        f = frame[frame[column].notna()]
-        err = (f[column] - f.actual) * 100
-        err_ar = (f.pred_ar - f.actual) * 100
-        n = len(f)
-        rows.append({"model": model,
-                     "mae_bp": err.abs().mean() if n else np.nan,
-                     "rmse_bp": math.sqrt((err ** 2).mean()) if n else np.nan,
-                     "n_oos": n,
-                     "n_beats_ar": int((err.abs() < err_ar.abs()).sum())})
-    return pd.DataFrame(rows, columns=names(7))
-
-
-def num(v) -> float | None:
-    """A JSON number, or null for missing."""
-    return None if v is None or (isinstance(v, float) and math.isnan(v)) else round(float(v), 6)
-
-
-def run_nowcast(index: pd.DataFrame, quarters: pd.DataFrame, metrics: pd.DataFrame) -> dict:
-    """File 6."""
-    x, qnames = series(index, quarters), list(quarters.fiscal_quarter)
-    comp, lag, sig = x["comp"], x["lag"], x["intent_shock"]
-    t = qnames.index(LAST_QUARTER)
-    out = {k: None for k in names(6)}
-    out.update(target_quarter=LAST_QUARTER, verdict="scenario")
-    elig = np.array([j for j in range(len(qnames)) if j != t
-                     and not (np.isnan(comp[j]) or np.isnan(lag[j]) or np.isnan(sig[j]))])
-    if np.isnan(sig[t]) or np.isnan(lag[t]) or len(elig) < MIN_TRAIN:
-        return out
-    ar = ols(comp[elig], [lag[elig]]).params
-    fit = ols(comp[elig], [lag[elig], sig[elig]])
-    beta, beta_se = fit.params[2], fit.bse[2]
-    pred_ar = ar[0] + ar[1] * lag[t]
-    pred_laya = fit.params[0] + fit.params[1] * lag[t] + beta * sig[t]
-    delta = (pred_laya - pred_ar) * 100
-    half = Z80 * beta_se * abs(sig[t]) * 100
-    mae = metrics.set_index("model").mae_bp
-    beats_ar = bool(mae["ar_laya"] < mae["ar"])  # False when either is missing
-    out.update(beta=num(beta), beta_se=num(beta_se), shock_current=num(sig[t]),
-               pred_ar=num(pred_ar), pred_ar_laya=num(pred_laya), delta_comp_bp=num(delta),
-               delta_comp_bp_lo80=num(delta - half), delta_comp_bp_hi80=num(delta + half),
-               verdict="nowcast" if (delta - half > 0 or delta + half < 0) and beats_ar
-               else "scenario")
-    return out
-
-
-def run_leadlag(index: pd.DataFrame, quarters: pd.DataFrame) -> pd.DataFrame:
-    """File 8: corr of signal(q) with comp(q + lag), completed quarters only."""
-    x = series(index, quarters)
-    comp, partial, n_q = x["comp"], x["partial"], len(quarters)
-    rows = []
-    for sig_name in LEADLAG_SIGNALS:
-        s = x[sig_name]
-        for lag in (-1, 0, 1):
-            pairs = [(s[j], comp[j + lag]) for j in range(n_q)
-                     if 0 <= j + lag < n_q and not partial[j] and not partial[j + lag]
-                     and not np.isnan(s[j]) and not np.isnan(comp[j + lag])]
-            corr = float(np.corrcoef(np.array(pairs).T)[0, 1]) if len(pairs) >= 3 else np.nan
-            rows.append({"signal": sig_name, "lag": lag, "corr": corr, "n": len(pairs)})
-    return pd.DataFrame(rows, columns=names(8))
-
-
 # ---------------------------------------------------------------- writing
 
 def write_csv(df: pd.DataFrame, number: int) -> None:
@@ -566,22 +385,17 @@ def write_json(obj: dict, number: int) -> None:
 
 
 def write_all() -> None:
+    """Write files 1 to 3 and 9, then run the real pipeline on them for files 4 to 8, so the
+    MOCK_ outputs are exactly what aggregate.py and backtest.py produce from the CSVs."""
     rng = np.random.default_rng(SEED)
     quarters, true_comp = make_quarters(rng)
     items, feats = make_items(rng, quarters, true_comp)
-    index = build_index(items, feats, quarters)
-    backtest = run_backtest(index, quarters)
-    metrics = run_metrics(backtest)
-    nowcast = run_nowcast(index, quarters, metrics)
-    leadlag = run_leadlag(index, quarters)
-    agreement = make_agreement(rng)
-    for number, frame in [(1, items), (2, feats), (3, quarters), (4, index),
-                          (5, backtest), (7, metrics), (8, leadlag)]:
+    for number, frame in [(1, items), (2, feats), (3, quarters)]:
         write_csv(frame, number)
-    write_json(nowcast, 6)
-    write_json(agreement, 9)
-    print(f"Wrote 9 MOCK_ files (seed {SEED}). Mock verdict: {nowcast['verdict']}, "
-          f"delta_comp_bp = {nowcast['delta_comp_bp']}.")
+    write_json(make_agreement(rng), 9)
+    print(f"Wrote MOCK_ files 1, 2, 3, 9 (seed {SEED}). Running the pipeline for files 4 to 8.")
+    aggregate.main(["--mock"])
+    backtest.main(["--mock"])
 
 
 # ---------------------------------------------------------------- contract check
@@ -692,11 +506,15 @@ def cross_checks(f: dict) -> dict[int, list[str]]:
         e[1].append("item_id is not unique")
     if (items.date_low > items.date_high).any():
         e[1].append("date_low after date_high")
-    red, goo = items[items.source == "reddit"], items[items.source == "google"]
-    if (red.stars != "").any() or (red.created_exact == "").any() or (red.date_precision != "exact").any():
-        e[1].append("Reddit rows need created_exact, no stars, precision exact")
-    if (goo.created_exact != "").any() or (goo.date_precision == "exact").any():
-        e[1].append("Google rows need empty created_exact and a non-exact precision")
+    red = items[items.source == "reddit"]
+    if (red.stars != "").any() or (red.created_exact == "").any():
+        e[1].append("Reddit rows need created_exact and no stars")
+    timed, untimed = items[items.created_exact != ""], items[items.created_exact == ""]
+    if ((timed.date_precision != "exact") | (timed.date_low != timed.created_exact.str[:10])
+            | (timed.date_high != timed.date_low)).any():
+        e[1].append("rows with created_exact need precision exact and date_low = date_high = its date")
+    if (untimed.date_precision == "exact").any() or (untimed.source != "google").any():
+        e[1].append("rows without created_exact must be Google rows with a non-exact precision")
 
     if feats.item_id.duplicated().any():
         e[2].append("item_id is not unique")
