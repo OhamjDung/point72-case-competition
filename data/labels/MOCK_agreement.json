@@ -1,0 +1,30 @@
+{
+  "n_items": 50,
+  "model_version": "MOCK",
+  "questions": [
+    {
+      "question": "relevant",
+      "n": 50,
+      "pct_agreement": 74.7,
+      "cohen_kappa": 0.664
+    },
+    {
+      "question": "topic",
+      "n": 50,
+      "pct_agreement": 90.3,
+      "cohen_kappa": 0.484
+    },
+    {
+      "question": "stockout",
+      "n": 50,
+      "pct_agreement": 84.2,
+      "cohen_kappa": 0.733
+    },
+    {
+      "question": "intent",
+      "n": 50,
+      "pct_agreement": 87.9,
+      "cohen_kappa": 0.49
+    }
+  ]
+}

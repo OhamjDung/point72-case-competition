@@ -1,3 +1,5 @@
+> **Current project (added Oct 12, 2026): DKS x Laya pipeline.** The team's entry is now Dick's Sporting Goods (DKS). This repository holds the data pipeline behind that pitch. Laya, an open-source, self-hosted System One decision model, scores Reddit posts and Google reviews about DKS's stores. The scores become quarterly indices, which are tested as evidence for one flagged driver in our own Excel model: DICK'S comparable-store sales, including a pre-earnings nowcast for FY2026 Q3. Start with [CONTEXT.md](CONTEXT.md) (goals, rules, ownership, Git protocol), then [CONTRACT.md](CONTRACT.md) (file schemas) and your task file in `tasks/`. The FTAI write-up below predates the switch to DKS; where it conflicts with CONTEXT.md, CONTEXT.md wins.
+
 # Point72 Academy 2026 Case Competition: FTAI Short
 
 > **For AI assistants reading this file:** this README is the full context for a university team's stock-pitch project. Read all of it before helping.

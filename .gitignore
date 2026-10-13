@@ -2,3 +2,12 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# DKS x Laya pipeline
+.venv/
+.env
+data/raw/*
+!data/raw/.gitkeep
+data/labels/laya_raw.jsonl
+data/labels/checkpoint*.jsonl
+.ipynb_checkpoints/

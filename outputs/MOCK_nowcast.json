@@ -1,0 +1,12 @@
+{
+  "target_quarter": "FY2026Q3",
+  "beta": 15.483322,
+  "beta_se": 3.947788,
+  "shock_current": 0.112509,
+  "pred_ar": 0.530931,
+  "pred_ar_laya": 3.031075,
+  "delta_comp_bp": 250.014377,
+  "delta_comp_bp_lo80": 193.09295,
+  "delta_comp_bp_hi80": 306.935804,
+  "verdict": "nowcast"
+}

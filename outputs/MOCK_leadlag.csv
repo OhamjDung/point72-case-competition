@@ -1,0 +1,7 @@
+signal,lag,corr,n
+intent_idx,-1,0.768274,21
+intent_idx,0,0.96742,22
+intent_idx,1,0.778239,21
+stockout_idx,-1,-0.744298,21
+stockout_idx,0,-0.756805,22
+stockout_idx,1,-0.536025,21

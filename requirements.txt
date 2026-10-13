@@ -1,0 +1,8 @@
+# dks_laya pipeline. Python 3.10+ (also runs on Google Colab).
+# Minimum versions, not exact pins.
+pandas>=1.5
+numpy>=1.23
+statsmodels>=0.13.5
+matplotlib>=3.6
+requests>=2.28
+python-dateutil>=2.8.2
