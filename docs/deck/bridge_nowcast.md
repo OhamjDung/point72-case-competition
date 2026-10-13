@@ -4,4 +4,4 @@ Pre-earnings consumer text points to a FY2026 Q3 DICK'S comp of **{X}%**, versus
 
 **Suggested visuals:** `signal_vs_comps.png`, `backtest_mae.png`, and the Excel price-target bridge.
 
-Source: Team analysis of Reddit and Google text scored with Laya (open source); DKS earnings releases; `outputs/metrics.csv`; `outputs/nowcast.json`.
+Source: Team analysis of r/dickssportinggoods text collected via the official Reddit API and scored with Laya (open source); DKS quarterly earnings releases, FY2021 to FY2026 Q2; `outputs/metrics.csv`; `outputs/nowcast.json`.

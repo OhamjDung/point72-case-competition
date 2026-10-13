@@ -25,6 +25,8 @@ Use the workbook's existing revenue build. The incremental chain should be formu
 
 `Comp_Case -> comparable revenue -> total revenue -> gross profit -> operating income -> after-tax income -> EPS -> price target`.
 
+From FY2025 Q3 onward, the reported `gross_margin_pct` in the P1 fundamentals handoff is consolidated and includes Foot Locker plus acquisition inventory charges. Do not label it as a standalone DICK'S Business margin. Any Foot Locker comparable-sales figure used in the workbook must be labelled **proforma**, matching DKS's disclosure.
+
 Useful audit rows:
 
 - `Incremental_Revenue = Revenue_Laya - Revenue_Base`

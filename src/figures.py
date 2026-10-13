@@ -27,8 +27,8 @@ PALETTE = {
     "light": "#D9E2F3",
 }
 FOOTNOTE = (
-    "Source: team analysis of Reddit/Google text scored with Laya (open source); "
-    "DKS earnings releases."
+    "Source: team analysis of r/dickssportinggoods text collected via the official Reddit API "
+    "and scored with Laya (open source); DKS earnings releases."
 )
 
 

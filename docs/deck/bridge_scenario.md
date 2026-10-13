@@ -4,4 +4,4 @@ The consumer-text signal did not beat the AR baseline out of sample across **{n}
 
 **Suggested visuals:** `signal_vs_comps.png`, `backtest_mae.png`, and the Excel sensitivity table.
 
-Source: Team analysis of Reddit and Google text scored with Laya (open source); DKS earnings releases; `outputs/metrics.csv`; `outputs/nowcast.json`.
+Source: Team analysis of r/dickssportinggoods text collected via the official Reddit API and scored with Laya (open source); DKS quarterly earnings releases, FY2021 to FY2026 Q2; `outputs/metrics.csv`; `outputs/nowcast.json`.
