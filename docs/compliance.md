@@ -25,6 +25,6 @@ Data API Terms, https://redditinc.com/policies/data-api-terms ("Last Revised Jul
 
 Our method: read-only API within rate limits, usernames replaced by salted hashes, deleted items purged (re-check of all 17,573 in-scope items on 2026-10-12: 0 deleted). Laya only scores the text (no training).
 
-Status: **unclear.** API collection is allowed. Storing the data and republishing raw text publicly go beyond "display".
+Status: **unclear.** API collection is allowed. Storing the data and republishing raw text go beyond "display".
 
-**Recommendation: USE WITH DISCLOSURE.** Publish aggregates, not raw text.
+**Recommendation: USE WITH DISCLOSURE.** Slides show aggregates only. Team decision (Tom, 2026-10-12): the cleaned raw text (no author identifiers) stays in the team's public repo for reproducibility; this is disclosed, and later author deletions are not reflected there.

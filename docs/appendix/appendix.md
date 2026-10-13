@@ -10,12 +10,13 @@ Each slide body is 80 words or fewer (counts in brackets). Placeholders in `{bra
 
 **Body [76 words]**
 - **Objective:** speed up research, coding and text scoring without letting AI choose the answer.
-- **Tools (all publicly offered):** Laya (open source, self-hosted on Google Colab) scores the text; Claude Code (Anthropic) and ChatGPT/Codex (OpenAI) for research, code and reviews; Claude API as a standby scoring fallback.
-- **Output:** 17,198 Reddit items scored on 7 frozen questions.
+- **Tools (all publicly offered):** {scorer} scores the text; Claude Code (Anthropic) and ChatGPT/Codex (OpenAI) for research, code and reviews; Claude API as a standby scoring fallback.
+- **Output:** {n_scored} Reddit items scored on 7 frozen questions.
 - **Interpretation:** AI did the volume work. We fixed questions and tests before seeing results.
 - **Limitation:** AI facts were re-checked against SEC filings.
 
 **Supporting detail**
+- Fill `{n_scored}` from `data/labels/item_features.csv` row count (P2 may subsample at the 8:30 runtime gate; 17,198 items were cleaned). Fill `{scorer}` with "Laya (open source, self-hosted on Google Colab)" if the Laya run passed, or "Claude API (Anthropic)" if P2 used the fallback; take it from `model_version`.
 - Pipeline: scraped Reddit text -> 7 frozen Laya questions -> quarterly indices on DKS fiscal quarters -> expanding-window backtest against an AR(1) baseline -> one flagged comp driver in our own Excel model.
 - Laya: package `laya` 0.4.6, checkpoint `convaiinnovations/laya` at a pinned revision (CONTRACT.md file 2), Apache-2.0.
 - Claude Code (Opus 5.5) ran the data cleaning, the fundamentals table and the terms check for P1. It also ran the early ticker screen with Claude Sonnet 5.5 research agents (genai_log/01_screening.md).
@@ -66,7 +67,7 @@ Each slide body is 80 words or fewer (counts in brackets). Placeholders in `{bra
 - **Controls:** questions and spec frozen first; missing data kept missing; Google reviews excluded under their terms.
 
 **Supporting detail**
-- Data collection: official Reddit API (PRAW), read-only, within rate limits; usernames replaced by salted hashes; items deleted on Reddit are purged; only aggregates published. Google reviews were collected through the official Places API but excluded under Google's terms (docs/compliance.md).
+- Data collection: official Reddit API (PRAW), read-only, within rate limits; usernames replaced by salted hashes; items deleted on Reddit are purged; slides show aggregates only; the cleaned raw text (no author identifiers) is in the team's public repo for reproducibility, and later author deletions are not reflected there. Google reviews were collected through the official Places API but excluded under Google's terms (docs/compliance.md).
 - Coverage: 17,198 items, 2021-02-04 to 2026-10-12; 17,191 from r/dickssportinggoods (largely employee voice). Items per year: 2021: 37, 2022: 448, 2023: 643, 2024: 2,764, 2025: 5,316, 2026: 7,990. Early quarters fall below the 15-item threshold, which shortens the backtest.
 - FY2026 Q3 signal is partial: data through 2026-10-12 against a quarter ending 2026-10-31 (coverage about {coverage_pct}%).
 - Laya's probabilities are used as shipped (no recalibration on our labels), so its over-confidence caveat applies.
